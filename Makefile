@@ -5,6 +5,7 @@ DC ?= /home/igor/tool/dmd/dmd.2.068.0/linux/bin32/dmd
 DIG_DIR := $(SRC_DIR)/source/dig
 
 SRC := $(DIG_DIR)/traits/abstract_entity.d
+SRC += $(DIG_DIR)/traits/identity.d
 SRC += $(DIG_DIR)/traits/package.d
 SRC += $(DIG_DIR)/idiom/block.d
 SRC += $(DIG_DIR)/io/file.d
