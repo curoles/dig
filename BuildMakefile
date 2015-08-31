@@ -1,0 +1,6 @@
+# cp BuildMakefile <build-dir>/Makefile
+#
+
+SRC_DIR := ../dig
+
+include $(SRC_DIR)/Makefile

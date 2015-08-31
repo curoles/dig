@@ -1,3 +1,5 @@
+module dig.idiom.block;
+
 // With delegate(s) one can mimic Ruby's block/yield.
 
 template Block(R, T...)

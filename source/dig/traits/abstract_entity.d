@@ -1,4 +1,4 @@
-module foundation.traits.abstract_entity;
+module dig.traits.abstract_entity;
 //@igor TODO file bug, can't use keyword as package/module name, for example "abstract".
 
 /** An abstract entity is an individual thing that is eternal

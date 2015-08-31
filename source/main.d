@@ -1,5 +1,5 @@
 import std.stdio;
-import foundation.traits;
+import dig.traits;
 
 int main()
 {
