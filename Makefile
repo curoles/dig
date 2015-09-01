@@ -12,6 +12,10 @@ SRC += $(DIG_DIR)/idiom/times.d
 SRC += $(DIG_DIR)/io/file.d
 SRC += $(SRC_DIR)/source/main.d
 
+TBOX := $(DIG_DIR)/toolbox/main.d
+TBOX += $(DIG_DIR)/toolbox/wc.d
+
+
 BLD_DIR := ./
 
 #-v -deps
@@ -19,5 +23,6 @@ BLD_DIR := ./
 all: $(SRC)
 	@echo Compiling with $(DC)
 	$(DC) -unittest $(SRC) -od$(BLD_DIR) -of$(BLD_DIR)/test
+	$(DC) -unittest $(TBOX) -od$(BLD_DIR) -of$(BLD_DIR)/toolbox
 
 .PHONY: all

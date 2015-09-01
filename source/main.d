@@ -1,8 +1,8 @@
 import std.stdio;
 import dig.traits;
 
-int main()
+int main(string[] args)
 {
-    writeln("Enter main()");
+    writefln("Enter main(%s)", args);
     return 0;
 }
