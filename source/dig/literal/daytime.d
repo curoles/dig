@@ -9,6 +9,11 @@
  * License:
  * Distributed under the Boost Software License, Version 1.0.
  * (See accompanying file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+ *
+ * See_Also:
+ * "D Cookbook" by Adam D. Ruppe, chapter 9.
+ * See_Also:
+ * $(LINK http://www.drdobbs.com/tools/user-defined-literals-in-the-d-programmi/229401068)
  */
 module dig.literal.daytime;
 
@@ -65,7 +70,13 @@ unittest
     assertThrown!Exception(readDaytimeString("24:00:01"));
 }
 
-///
+/**
+ * Convert day time string literal to number literal.
+ *
+ * Using template+enum forces CTFE. When you declare an `enum` structure
+ * with a value, the right-hand side of the equation is immediatly evaluated
+ * at compile time, regardless of complexity.
+ */
 template daytime(string s)
 {
     enum daytime = readDaytimeString(s);
@@ -76,6 +87,19 @@ unittest
 {
     static assert(daytime!"1:15:33" == 1*60*60 + 15*60 + 33);
     static assert(daytime!"1:15:33" - daytime!"1:15:00" == 33);
+}
+
+/// Makes sense to have template specification with `uint` also.
+template daytime(uint time_in_sec)
+{
+    enum daytime = time_in_sec;
+    static assert(time_in_sec <= daytime!"24:00:00");
+}
+
+///
+unittest
+{
+    static assert(daytime!"00:00:00" + daytime!61 == daytime!"1:01");
 }
 
 ///
