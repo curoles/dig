@@ -29,8 +29,11 @@ all: $(SRC) $(TBOX)
 	$(DC) -unittest $(TBOX) -od$(BLD_DIR) -of$(BLD_DIR)/toolbox -op $(DMD_GENDOC)/toolbox
 
 I2PR_DIR := $(SRC_DIR)/intro2programming
-I2PR := $(I2PR_DIR)/foreword.ddoc.d
+I2PR := $(I2PR_DIR)/title.ddoc.d
+I2PR += $(I2PR_DIR)/foreword.ddoc.d
 I2PR += $(I2PR_DIR)/intro.ddoc.d
+I2PR += $(I2PR_DIR)/ch1.ddoc.d
+I2PR += $(I2PR_DIR)/ch2.ddoc.d
 
 I2PR_DOC := $(BLD_DIR)/doc/intro2prog
 

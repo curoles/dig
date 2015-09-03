@@ -1,12 +1,9 @@
-Ddoc
-$(H1 Foreword)
-hello
----
-import std.stdio;
+$(H2 Foreword)
 
-void foo()
-{
-    writeln("foo!");  /* print the string */
-}
----
-bla bla
+$(P
+This book ...
+)
+
+$(P
+next para
+)
