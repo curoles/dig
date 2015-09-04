@@ -3,4 +3,8 @@
 
 SRC_DIR := ../dig
 
+DC := /home/igor/tool/dmd/dmd.2.068.0/linux/bin32/dmd
+
+ESPEAK_LIB := /usr/lib/x86_64-linux-gnu/libespeak.so.1
+
 include $(SRC_DIR)/Makefile

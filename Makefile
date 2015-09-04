@@ -10,6 +10,7 @@ SRC += $(DIG_DIR)/traits/package.d
 SRC += $(DIG_DIR)/idiom/block.d
 SRC += $(DIG_DIR)/idiom/times.d
 SRC += $(DIG_DIR)/literal/daytime.d
+SRC += $(DIG_DIR)/literal/ansiescape.d
 SRC += $(DIG_DIR)/io/file.d
 SRC += $(SRC_DIR)/source/main.d
 
