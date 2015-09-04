@@ -36,6 +36,7 @@ I2PR += $(I2PR_DIR)/foreword.ddoc.d
 I2PR += $(I2PR_DIR)/intro.ddoc.d
 I2PR += $(I2PR_DIR)/ch1.ddoc.d
 I2PR += $(I2PR_DIR)/ch2.ddoc.d
+I2PR += $(I2PR_DIR)/ch11.progishard.ddoc.d
 
 I2PR_DOC := $(BLD_DIR)/doc/intro2prog
 

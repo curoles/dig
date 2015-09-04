@@ -14,7 +14,7 @@ $(LI Chapter 7. OOP. Inheretance and Composition)
 $(LI Chapter 8. Algorithms)
 $(LI Chapter 9. Styles of Programming)
 $(LI Chapter 10. Typical Programming Tasks)
-$(LI Chapter 11. Programming is not easy)
+$(LI Chapter 11. Programming is hard)
 )
 )
 
