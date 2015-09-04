@@ -1,4 +1,4 @@
-$(H1 Chapter 2. Programs)
+$(H1 Chapter 2. Types)
 
 $(P
 p1

@@ -31,6 +31,7 @@ all: $(SRC) $(TBOX)
 
 I2PR_DIR := $(SRC_DIR)/intro2programming
 I2PR := $(I2PR_DIR)/title.ddoc.d
+I2PR += $(I2PR_DIR)/toc.ddoc.d
 I2PR += $(I2PR_DIR)/foreword.ddoc.d
 I2PR += $(I2PR_DIR)/intro.ddoc.d
 I2PR += $(I2PR_DIR)/ch1.ddoc.d

@@ -1,9 +1,6 @@
 $(H2 Foreword)
 
 $(P
-This book ...
+Not available
 )
 
-$(P
-next para
-)
