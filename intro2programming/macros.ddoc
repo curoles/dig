@@ -4,6 +4,28 @@ DDOC =
   <META http-equiv="content-type" content="text/html; charset=utf-8">
   <title>$(TITLE)</title>
 </head>
+<style>
+body {
+  font-family: Verdana;
+  width: 50em;
+}
+pre {
+  background-color:lightgray
+}
+pre.d_code {
+  background-color:lightyellow
+}
+h1 {
+  background-color:lightblue
+}
+h2 {
+  background-color:lightgreen
+}
+
+h1 {page-break-before: always;}
+h2 {page-break-before: always;}
+
+</style>
 <body>
 $(BODY)
 </body>
@@ -11,3 +33,4 @@ $(BODY)
 
 H1 = <h1>$0</h1>
 H2 = <h2>$0</h2>
+

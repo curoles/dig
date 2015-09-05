@@ -1,4 +1,4 @@
-$(H1 Chapter 11. Programming is hard)
+$(H1 Chapter 11. Programming is Hard)
 
 $(P
 people can't program

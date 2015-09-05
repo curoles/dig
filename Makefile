@@ -29,21 +29,10 @@ all: $(SRC) $(TBOX)
 	$(DC) -unittest $(SRC)  -od$(BLD_DIR) -of$(BLD_DIR)/test    -op $(DMD_GENDOC)/dig
 	$(DC) -unittest $(TBOX) -od$(BLD_DIR) -of$(BLD_DIR)/toolbox -op $(DMD_GENDOC)/toolbox
 
-I2PR_DIR := $(SRC_DIR)/intro2programming
-I2PR := $(I2PR_DIR)/title.ddoc.d
-I2PR += $(I2PR_DIR)/toc.ddoc.d
-I2PR += $(I2PR_DIR)/foreword.ddoc.d
-I2PR += $(I2PR_DIR)/intro.ddoc.d
-I2PR += $(I2PR_DIR)/ch1.ddoc.d
-I2PR += $(I2PR_DIR)/ch2.ddoc.d
-I2PR += $(I2PR_DIR)/ch11.progishard.ddoc.d
+clean:
+	rm -rf $(BLD_DIR)/*
 
-I2PR_DOC := $(BLD_DIR)/doc/intro2prog
-
-intro2prog:
-	mkdir -p $(I2PR_DOC)
-	cat $(I2PR) > $(I2PR_DOC)/all.ddoc.d
-	$(DC) -D -Dd$(I2PR_DOC) $(I2PR_DIR)/macros.ddoc $(I2PR_DOC)/all.ddoc.d
+include $(SRC_DIR)/intro2programming/Makefile
 
 
-.PHONY: all intro2prog
+.PHONY: all clean
