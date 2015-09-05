@@ -1,7 +1,7 @@
 $(H1 Chapter 2. Types)
 
 $(P
-p1
+5things, categorisation
 )
 
 $(P

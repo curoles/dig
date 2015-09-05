@@ -1,4 +1,4 @@
-$(H2 Computer Program)
+$(H2 Computer Program Syntax)
 
 $(P
 Programmers write programs using computer languages.

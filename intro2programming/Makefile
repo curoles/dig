@@ -5,6 +5,7 @@ I2PR += $(I2PR_DIR)/toc.ddoc.d
 I2PR += $(I2PR_DIR)/foreword.ddoc.d
 I2PR += $(I2PR_DIR)/intro.ddoc.d
 I2PR += $(I2PR_DIR)/ch1/ch1.ddoc.d
+I2PR +=   $(I2PR_DIR)/ch1/computer.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch1/compr.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch1/comments.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch1/literals.ddoc.d

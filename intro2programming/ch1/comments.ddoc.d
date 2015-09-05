@@ -43,3 +43,12 @@ using each other; well placed comments can save time.
 
 2 divs in row
 div then mult
+
+---
+int luckyNumber = 777; // This is single line comment about lucky number :)
+
+/* This is
+     multiple lines
+       comment block.
+*/
+---

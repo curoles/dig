@@ -3,7 +3,7 @@ $(H2 Introduction)
 $(P
 This book targets young students making their first steps in learning Computer Programming.
 All explanations are simple and should be understandable for a middle school student.
-Therefore, with that in mind about the target audience, the following is true about the text:
+Therefore, with that in mind about the targeted audience, the following is true about the text:
 $(UL
 $(LI No pre-existing knowledge in computer programming is required.
      All neccessary for understaning technical terminology and concepts
@@ -15,7 +15,7 @@ $(LI Focus is on the fundamental aspects of Programming; reader is not overloade
 $(LI
 No need for certain computer or Operating System.
 No need to install anything.
-All examples can run using online service $(LINK dpaste.dzfl.pl).
+All examples can run using online service $(LINK http://dpaste.dzfl.pl).
 )
 )
 )
@@ -37,9 +37,8 @@ $(P
 Where this book is different from other "Programming for Kids" books:
 $(UL
 $(LI
-It does not try to be playful. No silly pictures.
-Drawings of a computer box with a face does not achive anything
-and is unneccesory distraction.
+It does not try to be playful. No silly pictures like
+one of a computer box with a face.
 )
 $(LI
 It does not teach by trying to show tons of examples.
@@ -70,6 +69,6 @@ $(LI All considered is good for demonstrating many aspects of programming.)
 $(P
 In order to run code examples in the book,
 nothing is required from a reader other than Web Browser:
-online resource $(LINK dpaste.dzfl.pl) executes D code and shows program output.
+online resource $(LINK http://dpaste.dzfl.pl) executes D code and shows program output.
 )
 
