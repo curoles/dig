@@ -15,6 +15,13 @@ pre {
 pre.d_code {
   background-color:lightyellow
 }
+pre.d_inline_code {
+  background-color:yellow
+}
+code.d_inline_code {
+  background-color:yellow
+}
+
 h1 {
   background-color:lightblue
 }
@@ -33,4 +40,6 @@ $(BODY)
 
 H1 = <h1>$0</h1>
 H2 = <h2>$0</h2>
+
+D_INLINECODE = <code style="display:inline;" class="d_inline_code">$0</code>
 

@@ -40,13 +40,17 @@ $(OL
 $(LI Count numbers.)
 $(LI Choose between two options and branch execution accodingly.)
 $(LI Stay in a loop and repeat.)
-$(LI Store data in memory wuth a tag. Find in memory by the tag.)
+$(LI Store data in memory with a tag. Find in memory by the tag.)
 $(LI Get user input from keyboard. Print results out.)
 )
 )
 
-Therefore, when programmer writes computer program it can command
-computer to do just these 5 things, but he has freedom to combine
-them at his will.
+$(P
+Therefore, when programmer writes computer program
+each line of the code commands
+computer to do just one of those $(I 5 Things), but programmw has freedom to mix
+them together at his will and that is what any program essensially is:
+"a lot of individually simple command mixed together".
+)
 
 

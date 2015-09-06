@@ -41,9 +41,20 @@ using each other; well placed comments can save time.
 )
 )
 
-2 divs in row
-div then mult
+$(P
+There are 2 ways in D to make a comment:
+$(OL
+$(LI
+Everything that starts with `//` to the end of the line is a comment.
+)
+$(LI
+Everything between `/*` and `*/` is a comment.
+)
+)
+)
 
+$(P
+Examples:
 ---
 int luckyNumber = 777; // This is single line comment about lucky number :)
 
@@ -52,3 +63,14 @@ int luckyNumber = 777; // This is single line comment about lucky number :)
        comment block.
 */
 ---
+)
+
+$(P
+This choice of symbols to mark where comments are in code is not accidental.
+In D in many other languages symbol `/` is used as division operator
+and `*` as multiplication.
+Both operators are binary, that is they require 2 operands: `a*b` and `a/b`.
+It is not possible to write valid expression where 2 divisions follow
+each other or when division and multiplication stay together.
+)
+

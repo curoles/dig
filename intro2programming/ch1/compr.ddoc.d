@@ -108,5 +108,16 @@ native computer code than the English sentence.
 )
 
 $(P
-Let us see what else D syntax has.
+If we know D language syntax we can read and understand any D program.
+So let us have a look on D syntax piece by piece.
+)
+
+$(P
+All right, we can name data types, variables and functions how we
+like it. But if we give meaningless names to thhings in our code
+then our code becomes un-readable: it would not possible to understand
+what is going on and what is what.
+The recommendation for good naming is simple:
+call types and variables by what they actually are
+and functions by what they do.
 )
