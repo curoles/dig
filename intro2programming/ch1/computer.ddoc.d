@@ -48,7 +48,7 @@ $(LI Get user input from keyboard. Print results out.)
 $(P
 Therefore, when programmer writes computer program
 each line of the code commands
-computer to do just one of those $(I 5 Things), but programmw has freedom to mix
+computer to do just one of those $(I 5 Things), but programmer has freedom to mix
 them together at his will and that is what any program essensially is:
 "a lot of individually simple command mixed together".
 )
