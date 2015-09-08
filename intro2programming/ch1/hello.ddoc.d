@@ -10,7 +10,7 @@ the same time as the number of minutes.
 
 $(P
 In the comments we will annotate lines of code with what $(I Thing)
-they do in regard to $(I The 5 Things):
+they do in regard to $(I The 5 Things), let us remind them:
 $(OL
 $(LI Count numbers.)
 $(LI Choose between options and branch executiion.)
@@ -46,7 +46,7 @@ void main()
     	
         // Tell user result, mention number of days. Thing #5.
         writefln("There are %d minutes in %d days and %d hours",
-            minutes, days, hours%24);
+            minutes, daThat last ys, hours%24);
     }
 
     // Print total number of passed time in minutes for each passed hour.
@@ -57,4 +57,8 @@ void main()
     }
 }
 ---
+)
+
+$(P
+TODO explain line by line
 )
