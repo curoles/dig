@@ -5,10 +5,18 @@ Programmers write programs using computer languages.
 Since we are human, it is only natural that a program
 written in a programming language does not look that much
 different from a text written in English language.
+
+Programmers write programs using computer languages.
+Eventually any computer program is going to be either
+compiled into native machine code or interpreted
+by some other program called $(I interpreter),
+but the original text should be comprehensible for humans also.
+Thus, most of the programs do not look that much different
+from a text written in English language.
 )
 
 $(P
-The reasons we can't use English language for programming is
+The reasons we can't use English language as-is for programming is
 somewhat similar to reasons why we do not use English in Algebra:
 $(UL
 $(LI
