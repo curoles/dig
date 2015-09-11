@@ -83,3 +83,9 @@ online resource $(LINK http://dpaste.dzfl.pl) executes D code and shows
 program's output.
 )
 
+$(P
+To be a programmer and write computer programs
+it really helps to understand how computers work.
+For that author recommends a book written for kids by Charles Petzold
+called "Code. The Hidden Language of Computer Hardware and Software".
+)
