@@ -3,6 +3,9 @@ $(H2 "The 5 Things computer does" program)
 $(P
 Finally we know D language syntax well enough
 to be able to write our first program.
+
+TODO Fa to C.INSTEAD!!!!
+
 It will be a program that converts hours to minutes,
 we tell it time as a number of hours and it returns us
 the same time as the number of minutes.

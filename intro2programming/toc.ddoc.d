@@ -15,19 +15,4 @@ $(LI Chapter 8. Algorithms)
 $(LI Chapter 9. Styles of Programming)
 $(LI Chapter 10. Typical Programming Tasks)
 $(LI Chapter 11. Programming is Hard)
-$(LI
-  Appendixes
-  $(UL
-  $(LI Appendix 1. Install D on your computer.)
-  $(LI Appendix 2. Compiler and other tools.)
-  $(LI Appendix 3. See what compiler generates.)
-  $(LI Appendix 4. Colorful output in terminal.)
-  $(LI Appendix 5. Make your program speak.)
-  )
-)
-)
-)
 
-
-Appendix 1. Install D.
-Appendix 2. Colorful output in terminal.

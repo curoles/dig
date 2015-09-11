@@ -23,12 +23,16 @@ import std.stdio;
 
 void main()
 {
-  int[3] a;
-  a[0] = 1;
-  a[1] = 2;
-  a[2] = 3;
+  int[3] a; // array named 'a' and size 3.
+  assert (a.length == 3);
 
-  foreach (int index, int value; a) {
+  a[0] = 1; // assign value 1 to first element.
+  a[1] = 2; // assign value 2 to second element.
+  a[2] = 3;
+//a[3] = 4; // Error. Static array 'a' does not have a[3].
+
+  // Print all array's values.
+  foreach (index, value; a) {
     writefln("a[%d] = %d", index, value);
   }
 }
@@ -43,13 +47,20 @@ a[2] = 3
 )
 
 $(P
+Sometimes you do not know array's size upfront
+and therefore can't use array of a fixed size.
+In this case dynamic array can be used.
+A dynamic array can be resized to any size.
+Let us rewrite previous example using dynamic array.
 ---
 import std.stdio;
 
 void main()
 {
-  int[] a;
-  a ~= 1;
+  int[] a; // dynamic array
+  assert (a.length == 0);
+  a ~= 1; // increase array's size by 1 and assign value 1 to the last element
+  assert (a.length == 1);
   a ~= 2;
   a ~= 3;
 

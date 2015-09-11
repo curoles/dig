@@ -64,7 +64,7 @@ or closed. It means that one gate can store 2 values: 0 and 1,
 or one $(I bit) of information.
 One $(I byte) is information size of 8 bits.
 If you count how many combinations of 0's and 1's 8 bits
-can have then you get 2^8 different combinations.
+can have then you get 2$(POW 8) different combinations.
 )
 
 $(P
