@@ -89,3 +89,13 @@ it really helps to understand how computers work.
 For that author recommends a book written for kids by Charles Petzold
 called "Code. The Hidden Language of Computer Hardware and Software".
 )
+
+$(P
+One of the biggest challenges with doing introductions into something
+as big of a topic as Programming, is that it is almost impossible
+to introduce all material in strongly sequential order without
+mentioning other not-yet-studyet topics. 
+So a reader shall not be too concerned if something does not make
+entire sense; make a note of it and move on, return to it later
+when more things about programming are understood.
+)

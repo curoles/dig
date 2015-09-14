@@ -33,14 +33,24 @@ one piece of code or another.
 
 $(P
 Everything computer does is kept in its memory.
-One computer instruction follow another instruction
-back-to-back in the memory. Because of that
-computer after he executed currect instruction
-can just fetch next instruction from the memory
-and execute it and so on. But this way computer
-execution flow is always the same, linear.
+One computer instruction follows another instruction
+back-to-back in the memory. Because of that,
+after computer executed currect instruction
+it can just fetch next instruction from the memory
+and execute it and so on.
+When computer does this cycle: execute instruction,
+fetch next instruction and execute it, the execution flow is
+linear, linear in the sense that it is absolutly predictible
+what instruction is going to be next.
 )
 
 $(P
-Now image there is an instruction like "jump 10 instructions forward".
+Not every computational task can be solved with the default,
+linear execution flow.
+The simplest way to introduce non-linear execution flow
+is to leave code as it is in the memory but allow "jumps".
+Imagine there is an instruction something like "jump 10 instructions forward".
+Upon execution this instruction tells computer to skip next
+10 instructions by means of incrementing current $(I Instruction Pointer) by 10.
+So the next instruction will be IP + 10. 
 )

@@ -23,3 +23,8 @@ big-scale projects, complexity
 $(P
 design, design iterations
 )
+
+$(P
+tradeoff even at coding style level
+for vs foreach ?
+)
