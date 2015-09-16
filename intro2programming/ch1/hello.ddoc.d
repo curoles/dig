@@ -25,41 +25,65 @@ $(LI Get user input from keyboard. Print results out.)
 
 $(P
 ---
-import std.stdio; // Use library that helps program to interract with user.
+// Fahrenheit to Celsius converter. Formula: T(°C) = (T(°F) - 32) × 5/9
 
-int hours; // Memory storage for amount of hours. Thing #4.
-int minutes; // Memory storage for minutes. Thing #4.
-int minutesPerHour = 60;  // Memory storage for number of minutes in one hour. #4.
+import std.stdio; // Use library that will help our program to interract with a user.
+
+int temperatureF = 71; // Storage for temperature in F.
+int temperatureC;      // Storage for temperature in C.
+int scaleOffset = 32;  // Storage for F and C scales offset.
+bool freezingCold;     // Variable that tells that it is freezing temperature.
+
 
 // 'main' is first function to be executed by computer, by agreement.
 void main()
 {
-    // Ask user. Thing #5.
-    writeln("Tell how many hours:");
-    readf("%d", &hours);
+    // Ask user to provide temperature in F.
+    writeln("Input temperature in F:");
+    readf("%d", &temperatureF);
     
-    minutes = hours * minutesPerHour; // Count. Thing #1.
+    temperatureC = ((temperatureF - scaleOffset) * 5 ) / 9; // Convertion from F to C.
     
-    if (hours < 24) { // Thing #2.
-        // Tell user result. Thing #5.
-        writefln("There are %d minutes in %d hours", minutes, hours);
+    if (temperatureC < 0) { // water freezes at 0 degrees Celsius.
+      freezingCold = true;
     }
     else {
-    	int days = hours / 24; // Count days. Thing #1.
-    	
-        // Tell user result, mention number of days. Thing #5.
-        writefln("There are %d minutes in %d days and %d hours",
-            minutes, daThat last ys, hours%24);
+      freezingCold = false;
     }
-
-    // Print total number of passed time in minutes for each passed hour.
-    seconds = 0;
-    foreach (hour: 0..hours) { // Loop and repeat. Thing #2.
-        minutes = minutes + 60; // Count. Thing #1.
-        writeln("$d : %d", hour, minutes); // Thing #5.
+	
+    // Tell user result of the convertion.
+    writefln("Temperature %d F = %s Celsius, freezing? %s",
+      temperatureF, temperatureC, freezingCold);
+	
+    // Print small convertion table around given temperature.
+    foreach (offset; -3..4) {
+      temperatureC = ((temperatureF + offset - scaleOffset) * 5 ) / 9;
+      writefln("%d F : %d C", temperatureF + offset, temperatureC);
     }
 }
 ---
+)
+
+$(P
+To run this program:
+$(UL
+$(LI
+Visit link $(LINK http://dpaste.dzfl.pl/0898fbbbc5e6)
+)
+$(LI
+You will see program's code and output right away.
+If you want to run it yourself then click $(B Fork) in panel $(B Actions).
+)
+$(LI
+The view changes and now you can see button $(B Run), press on it.
+Program is going to be compiled and then run.
+)
+$(LI
+On the Input/Output panel find tab $(B Input) and change input
+value for temperature in Fahrenheit. Press button $(B Run) again to see
+new output.
+)
+)
 )
 
 $(P
