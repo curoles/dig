@@ -28,3 +28,7 @@ $(P
 tradeoff even at coding style level
 for vs foreach ?
 )
+
+$(P
+open source - proof that programming is rewarding art
+)

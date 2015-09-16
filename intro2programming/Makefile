@@ -15,6 +15,7 @@ I2PR +=   $(I2PR_DIR)/ch1/keywords.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch1/hello.ddoc.d
 I2PR += $(I2PR_DIR)/ch2/ch2.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch2/builtin.ddoc.d
+I2PR +=   $(I2PR_DIR)/ch2/float.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch2/array.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch2/custom.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch2/deduce.ddoc.d

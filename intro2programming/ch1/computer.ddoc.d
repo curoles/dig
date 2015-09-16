@@ -5,6 +5,10 @@ People make computers to do things that are too boring or tedious
 for people to do. List of things people can do in or with their mind:
 $(OL
 $(LI
+Memorize things and be able to find them in the memory
+by their name. It includes categorization and abstracting things.
+)
+$(LI
 Count numbers (really we are only good for counting our fingers,
 it gets harder after 10 for us).
 )
@@ -13,10 +17,6 @@ Choose between two options based on some condition.
 )
 $(LI
 Repeat something several times.
-)
-$(LI
-Memorize things and be able to find it in the memory
-by their name. It includes categorization and abstracting things.
 )
 $(LI
 Interact with external world. Use senses to get and collect information.
@@ -38,10 +38,10 @@ Since people make computers and write programs,
 it should not surprise you then that computers also can only
 do the same 5 things:
 $(OL
+$(LI Store data in a memory with a tag. Find in the memory by the tag.)
 $(LI Count numbers.)
 $(LI Choose between options and branch execution accordingly.)
 $(LI Stay in a loop and repeat something.)
-$(LI Store data in a memory with a tag. Find in the memory by the tag.)
 $(LI Get user input from a keyboard. Print results out.)
 )
 )
