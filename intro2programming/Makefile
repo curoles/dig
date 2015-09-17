@@ -19,6 +19,7 @@ I2PR +=   $(I2PR_DIR)/ch2/float.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch2/array.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch2/custom.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch2/deduce.ddoc.d
+I2PR +=   $(I2PR_DIR)/ch2/const.ddoc.d
 I2PR += $(I2PR_DIR)/ch3/ch3.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch3/ifelse.ddoc.d
 I2PR +=   $(I2PR_DIR)/ch3/switch.ddoc.d

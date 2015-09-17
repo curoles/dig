@@ -6,11 +6,10 @@ Since we are human, it is only natural that a program
 written in a programming language does not look that much
 different from a text written in English language.
 
-Programmers write programs using computer languages.
 Eventually any computer program is going to be either
 compiled into native machine code or interpreted
 by some other program called $(I interpreter),
-but the original text should be comprehensible for humans also.
+but the original text should be comprehensible for humans as well.
 Thus, most of the programs do not look that much different
 from a text written in English language.
 )
@@ -40,6 +39,9 @@ be good for lawyers and philosophers, but not programmers$(RPAREN)
 )
 
 $(P
+We already know two languages: human native language English
+and the language of mathematical notations of Algebra.
+Let us have a look what are main constructs in these two languages. 
 A text written in English language has:
 $(UL
 $(LI words)
@@ -59,14 +61,15 @@ $(LI special symbols for operations, for example '=','+')
 )
 
 $(P
-When someone invents a programming language he usually:
+Therefore, when someone invents a programming language he usually:
 $(OL
 $(LI
 Starts with English and adds to it mathematical symbols.
 )
 $(LI
 Figures out a dozen or so words to be used as language keywords,
-other words are not allowed to be used except for user defined names.
+other words are not allowed to be used except for user defined names
+for variables and their types.
 )
 $(LI
 Simplifies grammar, that is describes only those few
@@ -74,14 +77,14 @@ combinations of keywords and symbols that are allowed.
 )
 $(LI
 Defines what each grammatical structure exactly means.
-easy tasks because the grammar is simplified and the
-vocabulary is very short.
+It is relativly easy tasks because the grammar is simplified and the
+"vocabulary" is very short.
 )
 )
 )
 
 $(P
-Let us consider following piece of D code:
+Let us have a look on a following simple piece of D code:
 ---
 int x = 7;
 ---
@@ -102,7 +105,7 @@ $(LI
 )
 $(LI
 `;` means end-of-statement, it is equvuvalent of '.' at the end of
-English sentence.
+English sentence. All statements in D must end with ';'.
 )
 )
 )
@@ -120,12 +123,4 @@ If we know D language syntax we can read and understand any D program.
 So let us have a look on D syntax piece by piece.
 )
 
-$(P
-All right, we can name data types, variables and functions how we
-like it. But if we give meaningless names to thhings in our code
-then our code becomes un-readable: it would not possible to understand
-what is going on and what is what.
-The recommendation for good naming is simple:
-call types and variables by what they actually are
-and functions by what they do.
-)
+

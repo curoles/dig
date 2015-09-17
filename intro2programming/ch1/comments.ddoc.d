@@ -21,14 +21,14 @@ You might ask why program code can not be self-explanatory.
 The reasons are:
 $(UL
 $(LI
-Understanding what each instruction in the code does
-does not explain what the program as whole is trying to achive.
-In other words, individual instrctions do not explain
+Understanding what each instruction in the code
+does not explain what the program as whole is trying to achieve.
+In other words, individual instructions do not explain
 the idea behind the algorithm.
 )
 $(LI
 Most of the coding styles (especially imperative) are good for
-solving problems and achiving results, and not neccessary for
+solving problems and achieving results, and not necessary for
 showing the "big" ideas behind the design or algorithm
 or why things done this way.
 )
@@ -67,10 +67,25 @@ int luckyNumber = 777; // This is single line comment about lucky number :)
 
 $(P
 This choice of symbols to mark where comments are in code is not accidental.
-In D in many other languages symbol `/` is used as division operator
+In D and in many other languages, symbol `/` is used as division operator
 and `*` as multiplication.
 Both operators are binary, that is they require 2 operands: `a*b` and `a/b`.
 It is not possible to write valid expression where 2 divisions follow
 each other or when division and multiplication stay together.
 )
 
+$(P
+Good comments have a great value, but comments should not explain trivial
+points of your program. The best advise for making understandable code
+is to use good names.
+
+We are going to learn about variables, their type and also about functions;
+we can name them whatever we like.
+But if we give meaningless names to things in our code
+then our code becomes unreadable, that is the code is hard to understand,
+hard to figure out what is going on and what is what.
+
+The recommendation for good naming is simple:
+call types and variables by what they actually are
+and functions by what they do.
+)

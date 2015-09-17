@@ -1,14 +1,14 @@
 $(H2 First program)
 
 $(P
-Finally we know D language syntax well enough
+Finally, we know D language syntax well enough
 to be able to write our first program.
 
 It will be a program that converts temperature in Fahrenheit to Celsius.
 We tell to our program a temperature in Fahrenheit as a number,
 in return the program prints out corresponding number in degrees Celsius.
-Additionaly the program says is the temperature below water freezing point
-and shows small °F to °C conversion table around the point.
+Additionally, the program says if is the temperature below water freezing point
+and shows small °F to °C conversion table around the point of interest.
 )
 
 $(P
@@ -98,7 +98,7 @@ Press button $(B Run) again to see new output.
 
 $(P
 Let us analyze out first program line by line.
-In our analisys we also consider how our code corresponds to
+In our analisys we also consider how our code relates to
 $(I The 5 Things Computer Does):
 
 $(OL
@@ -123,5 +123,68 @@ window and also get user's input (Thing #5).
 
 $(P
 Line `int temperatureF = 71;` allocates storage for integral variable
-that holds temperature in °F, initialize value with 71 (Thing #1).
+that holds temperature in °F, initializes value with 71. (Thing #1).
 )
+
+$(P
+`int temperatureC;` declares variable that holds temperature in C. (Thing #1).
+)
+
+$(P
+`int scaleOffset = 32;` declares variable that holds value of the zero point
+offset between Fahrenheit and Celsius temperature scales. (Thing #1).
+)
+
+$(P
+`bool freezingCold;` declares variable that holds true or false status
+of water freezing condition. (Thing #1).
+)
+
+$(P
+`void main() { ... }` defines function that will be called first when we
+run our program, by an agreement its name must be "main".
+This function returns `void` which means "nothing".
+Parenthesis are empty because there are not parameters to the function.
+The code or body of the function must be surrounded by `{` and `}`.
+)
+
+$(P
+`writeln("Input temperature in F:");` prints out text asking user for input. (Thing #5).
+)
+
+$(P
+`readf("%d", &temperatureF);` read user input and store it into variable `temperatureF`.
+(Thing #5).
+)
+
+$(P
+`temperatureC = ((temperatureF - scaleOffset) * 5 ) / 9;` reads values of variables
+`temperatureF` and `scaleOffset`, uses literals `5` and `9`,
+uses operators `-`,`*` and `/` to calculate temperature in C and stores that
+value into variable `temperatureC`. 
+(Thing #1 and #2).
+)
+
+$(P
+`if (temperatureC < 0) {freezingCold = true;}` check condition `temperatureC < 0` using
+keyword `if`.
+If temperature less than 0 then we assing true to variable `freezingCold`,
+otherwise we assign false to it with `else {freezingCold = false;}`.
+(Thing #3).
+)
+
+$(P
+`writefln("Temperature %d °F = %s Celsius, freezing? %s", ...);` prints out temperature
+in F and C, also if it is water freezing condition.
+(Thing #5).
+)
+ 
+$(P
+`foreach (offset; -3..4) { /*RepeatThisBlock*/ }` says that we want to
+go through each number in range [-3,4$(RPAREN), that is -3,-2,-1,0,1,2,3,
+on each iteration assign that number to variable called `offset`,
+and execute block of instructions between curly brackets `{` and `}`.
+(Thing #4).
+)
+
+

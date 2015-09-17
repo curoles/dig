@@ -53,8 +53,16 @@ computer to do just one of those $(I 5 Things),
 but programmer has freedom to mix
 them together at his will.
 Therefore, no matter how complex a program might look like,
-it essentially is just:
-"a lot of individually simple commands mixed together".
+it essentially is just
+a lot of individually simple commands mixed together.
 )
 
-
+$(P
+There is one more thing to discuss in regard to "what computer does".
+As was said before, your program could be $(I compiled) by a $(I compiler) into machine
+code that computer executes directly or $(I interpreted) by a program
+called $(I interpreter).
+We can run our D programs in both ways, but in this book we are
+going to use $(I compiler) and even check how our code was translated
+to native machine code.
+)

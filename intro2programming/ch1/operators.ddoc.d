@@ -3,32 +3,32 @@ $(H2 Operators)
 $(P
 $(I Operators) came to programming languages from mathemitics.
 They are responsible for calculations and logical operations and
-thus fall into category $(I Thing #1: Count) of $(I The 5 Things)
+thus fall into category $(I Thing #2: "Count number") of $(I The 5 Things)
 computers do.
 )
 
 $(P
-It is very natural that programmers adopted operators from mathematic.
+It is very natural that programmers adopted operators from mathematics.
 The reasons are obvious:
 $(UL
 $(LI
 Safe to say that any program uses mathematical or logical operations.
 )
 $(LI
-People already know them well and recognize immediatly.
+People already know them well and recognize immediately.
 Everyone understands that `c = a + b` means that `c` is equal
 to sum of `a` and `b`.
 )
 $(LI
-They were carefully chosen by matematisions for centures,
-they are short and convinient. So, there is no compelling reason
+They were carefully chosen by mathematicians for centuries,
+they are short and convenient. So, there is no compelling reason
 to invent new operations or new symbols for well known operations.
 )
 )
 )
 
 $(P
-List of commonly used operators:
+List of commonly used operators with examples:
 $(UL
 
 $(LI
@@ -85,5 +85,5 @@ a function like this:
 )
 
 $(P
-So operators are nothing more than just especially short named functions.
+So operators are nothing more than just especially shortly named functions.
 )
