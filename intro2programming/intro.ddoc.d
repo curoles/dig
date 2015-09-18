@@ -94,8 +94,14 @@ $(P
 One of the biggest challenges with doing introductions into something
 as big of a topic as Programming, is that it is almost impossible
 to introduce all material in strongly sequential order without
-mentioning other not-yet-studyet topics. 
+mentioning other not yet studied topics. 
 So a reader shall not be too concerned if something does not make
 entire sense; make a note of it and move on, return to it later
 when more things about programming are understood.
+)
+
+$(P
+For those readers who feel ready to tackle more advanced D code,
+there are references throughout the text
+to appendixes with some interesting code snippets.
 )

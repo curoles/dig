@@ -26,3 +26,13 @@ that is what code statements implementing what the function does.
 )
 
 )
+
+$(P
+varargs and writefln()
+)
+
+$(P
+rewrite f2c making convertion function
+)
+
+
