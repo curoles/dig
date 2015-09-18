@@ -4,7 +4,7 @@ $(P
 $(UL
 $(LI Foreword)
 $(LI Introduction)
-$(LI Chapter 1. Computer Program)
+$(LI $(LINK2 #ch1, Chapter 1. Computer Program))
 $(LI Chapter 2. Types)
 $(LI Chapter 3. Execution Flow)
 $(LI Chapter 4. Functions)

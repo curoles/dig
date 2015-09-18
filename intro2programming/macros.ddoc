@@ -41,6 +41,9 @@ $(BODY)
 H1 = <h1>$0</h1>
 H2 = <h2>$0</h2>
 
+CHAPTER = <h1 id="$1">$+</h1>
+SECTION = <h2 id="$1">$+</h2>
+
 D_INLINECODE = <code style="display:inline;" class="d_inline_code">$0</code>
 
 PRE = <pre>$0</pre>

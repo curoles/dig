@@ -1,4 +1,4 @@
-$(H1 Chapter 1. Computer Program)
+$(CHAPTER ch1, Chapter 1. Computer Program)
 
 $(P
 A computer program, as any other program in that sense,
