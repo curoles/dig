@@ -2,10 +2,11 @@ $(H2 Arrays)
 
 $(P
 People deal with collections of things all the times.
-We call a collection by different names: bunch, pile,
+We call collections by different names: bunch, pile,
 set, array and etc.
 Naturally, all computer languages support collections.
-The most straighforward collection type in D is $(I array).
+The most straighforward and easy to understand
+collection type in D is $(I array).
 )
 
 $(P
@@ -17,24 +18,31 @@ be addressed by its number.
 )
 
 $(P
-Here is an example of an array that has 3 integer values.
+Let us write a program that models an array of 3 apples on a table,
+each apple has some weight, we are going to store weights in an array
+and calculate mean weight.
 ---
 import std.stdio;
 
 void main()
 {
-  int[3] a; // array named 'a' and size 3.
-  assert (a.length == 3);
+  float[3] apples; // array is named 'apples' and has size 3.
+  assert (apples.length == 3);
 
-  a[0] = 1; // assign value 1 to first element.
-  a[1] = 2; // assign value 2 to second element.
-  a[2] = 3;
-//a[3] = 4; // Error. Static array 'a' does not have a[3].
+  apples[0] = 10; // first apple weights 10.
+  apples[1] = 12; // second apple weights 12.
+  apples[2] = 11; // third apple weights 12.
+//apples[3] = 13; // Error. Static array 'apples' does not have element #3.
+
+  float sum = 0;
 
   // Print all array's values.
-  foreach (index, value; a) {
-    writefln("a[%d] = %d", index, value);
+  foreach (index, weight; apples) {
+    writefln("weight of apple #%d is %.1f", index, weight);
+    sum += weight;
   }
+
+  writefln("mean weight is %d", sum / apples.length);
 }
 ---
 
@@ -51,7 +59,8 @@ Sometimes you do not know array's size upfront
 and therefore can't use array of a fixed size.
 In this case dynamic array can be used.
 A dynamic array can be resized to any size.
-Let us rewrite previous example using dynamic array.
+Below is an example of how to add or $(I push back) a new
+item into a dynamic array.
 ---
 import std.stdio;
 

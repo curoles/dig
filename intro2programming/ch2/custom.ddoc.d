@@ -2,31 +2,44 @@ $(H2 Custom User Defined Types)
 
 $(P
 Sometimes you want to have a data type that is not
-just a basic type like `int` or `string`, but something
+just a simple basic type like `int` or `string`, but something
+more complex.
 that is a combination of information about an oject.
 For example, your program is processing an information
 about people; in this case a sensible unit of data
 would have all information about a person: name, age and etc.
-grouped together. In D it could be done using `struct`.
+grouped together.
+In this case, tt would make sense to have a type that
+can combine objects of simpler types, for instance, `string` for name
+and `uint` for age.
+In D it could be done using `struct`.
 )
 
 $(P
 `struct` in D allows you to create compound types.
-For the example above it might look like:
+For the example above we can write following code usign `struct`:
 ---
 import std.stdio;
 
-struct Person
-{
+//keyword TypeName
+struct     Person
+{ // <- begin definition
+
+// Type  VariableName
   string firstName;
   string lastName;
-  uint age;
-}
+  uint   age;
+
+} // <- end definition
 
 void main()
 {
-  Person john = {firstName:"John", lastName:"Smith", age:15};
-  john.age = 16;
+// Type  Variable {    Field:Value      Field:Value  Field:Value };
+  Person john   = {firstName:"John", lastName:"Smith", age:15    };
+
+// var.field = new_value;
+  john.age   = 16;
+
   writefln("%s %s age %d", john.firstName, john.lastName, age);
 }
 ---

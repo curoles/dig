@@ -61,6 +61,7 @@ Let us fix it by using type $(B float) instead of type $(B int).
 )
 
 $(P
+Link to the code $(LINK http://dpaste.dzfl.pl/87849672359e).
 ---
 // Fahrenheit to Celsius converter. Formula: T(°C) = (T(°F) - 32) × 5/9
 
@@ -89,7 +90,7 @@ void main()
     }
 	
     // Tell user result of the convertion.
-    writefln("Temperature %.2f °F = %.2f °C", freezing? %s,
+    writefln("Temperature %.2f °F = %.2f °C, freezing? %s",
       temperatureF, temperatureC, freezingCold);
 	
     // Print small convertion table around given temperature.
@@ -102,15 +103,19 @@ void main()
 
 Application output:
 $(PRE
-Input temperature in F:
-Temperature 71.00 °F = 21.67 °C, freezing? false
-68.00 °F : 20.00 °C
-69.00 °F : 20.56 °C
-70.00 °F : 21.11 °C
-71.00 °F : 21.67 °C
-72.00 °F : 22.22 °C
-73.00 °F : 22.78 °C
-74.00 °F : 23.33 °C
+Temperature 80.00 °F = 26.67 °C, freezing? false
+77.00 °F : 25.00 °C
+78.00 °F : 25.56 °C
+79.00 °F : 26.11 °C
+80.00 °F : 26.67 °C
+81.00 °F : 27.22 °C
+82.00 °F : 27.78 °C
+83.00 °F : 28.33 °C
 )
 
+)
+
+$(P
+Improvement compare to the "integer" version is well seen,
+precision of the results is higher.
 )
