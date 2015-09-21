@@ -38,10 +38,16 @@ back-to-back in the memory. Because of that,
 after computer executed currect instruction
 it can just fetch next instruction from the memory
 and execute it and so on.
+
 When computer does this cycle: execute instruction,
 fetch next instruction and execute it, the execution flow is
-linear, linear in the sense that it is absolutly predictible
-what instruction is going to be next.
+linear.
+
+It is caller linear because if you make a graph where
+x-axes is time $(B t)
+and y-axes is address of instruction, or $(I Instruction Pointer),
+then IP(t) function is linear one IP(t) = A*t + B, where B is beginning
+address of a program and A is size of one instruction.
 )
 
 $(P

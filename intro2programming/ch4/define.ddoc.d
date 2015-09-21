@@ -4,6 +4,7 @@ $(P
 Here is how a function is defined in D:
 ---
 // ReturnValue FunctionName( Arguments ) { Statements; }
+//     ↓             ↓        ↓     ↓               ↓
       int           sum   (int a, int b) { return a + b; }
 ---
 
