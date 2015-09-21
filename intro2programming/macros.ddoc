@@ -10,7 +10,7 @@ body {
   width: 50em;
 }
 pre {
-  background-color:lightgray
+  background-color:#cccccc /* LibreOffice can't handle lightgray here */
 }
 pre.d_code {
   background-color:lightyellow
@@ -44,7 +44,9 @@ H2 = <h2>$0</h2>
 CHAPTER = <h1 id="$1">$+</h1>
 SECTION = <h2 id="$1">$+</h2>
 
-D_INLINECODE = <code style="display:inline;" class="d_inline_code">$0</code>
+D_INLINECODE = <code style="display:inline;background-color:yellow;" class="d_inline_code">$0</code>
+
+D_CODE       = <pre style="background-color:lightyellow;" class="d_code">$0</pre>
 
 PRE = <pre>$0</pre>
 POW = <sup>$0</sup>
