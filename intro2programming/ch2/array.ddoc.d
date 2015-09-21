@@ -12,8 +12,8 @@ collection type in D is $(I array).
 $(P
 $(I Array) is an ordered collection. For example, you have
 a bunch of apples. If you position them in a straight line on a table,
-then each apple gets its number or index in the line; you
-made an array of apples where any apple in the line can
+then each apple gets its number or index in the line;
+you just made an $(I array) of apples where any apple in the array can
 be addressed by its number.
 )
 
@@ -57,7 +57,7 @@ a[2] = 3
 $(P
 Sometimes you do not know array's size upfront
 and therefore can't use array of a fixed size.
-In this case dynamic array can be used.
+In this case $(I dynamic array) can be used.
 A dynamic array can be resized to any size.
 Below is an example of how to add or $(I push back) a new
 item into a dynamic array.
@@ -66,15 +66,15 @@ import std.stdio;
 
 void main()
 {
-  int[] a; // dynamic array
-  assert (a.length == 0);
-  a ~= 1; // increase array's size by 1 and assign value 1 to the last element
-  assert (a.length == 1);
-  a ~= 2;
-  a ~= 3;
+  int[] apples; // dynamic array
+  assert (apples.length == 0);
+  apples ~= 1; // increase array's size by 1 and assign value 1 to the last element
+  assert (apples.length == 1);
+  apples ~= 2;
+  apples ~= 3;
 
-  foreach (index, value; a) {
-    writefln("a[%d] = %d", index, value);
+  foreach (index, weight; a) {
+    writefln("weight of apples #%d if %.1f", index, weight);
   }
 
 }

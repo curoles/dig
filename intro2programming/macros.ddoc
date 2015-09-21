@@ -50,3 +50,5 @@ D_CODE       = <pre style="background-color:lightyellow;" class="d_code">$0</pre
 
 PRE = <pre>$0</pre>
 POW = <sup>$0</sup>
+
+TICK = '
