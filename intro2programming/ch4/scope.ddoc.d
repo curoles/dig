@@ -37,3 +37,7 @@ functions, types visibility
 $(P
 f2c version when vars inside main
 )
+
+$(P
+Person with with(john) 
+)
