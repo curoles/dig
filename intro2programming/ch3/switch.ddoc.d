@@ -20,19 +20,19 @@ $(P
 Switch statement works like this:
 ---
 switch ( Selector )
-{ // ← begin block
+{ // ← begin switch block
 
   case Case1:
   { // ← begin block
     Case1Statements;
   } // ← end block
-  break;
+  break; // exit switch block
 
   case Case2:
   { // ← begin block
     Case2Statements;
   } // ← end block
-  break;
+  break; // exit switch block
 
 ...
 
@@ -40,27 +40,30 @@ switch ( Selector )
   { // ← begin block
     CaseNStatements;
   } // ← end block
-  break;
+  break; // exit switch block
 
   default:
   { // ← begin block
     DefaultBlock;
   } // ← end block
+  break; // exit switch block
 
 } // ← end block
 ---
 )
 
 $(P
+Let us write a program that simulates traffic light
+that switches from yellow to red, then from red to green
+and from green back to yellow.
 ---
 import std.stdio;
 
 void main()
 {
-  string car = "moving";
-  string light = "yellow";
+  string light = "yellow"; // start with yellow light
 
-  foreach (time; 0..3)
+  foreach (time; 0..3) // switch light 3 times
   switch ( light )
   {
     case "yellow": // if (light == "yellow")
@@ -93,8 +96,25 @@ void main()
   }
 }
 ---
+
+Application output:
+$(PRE
+Brake on yellow
+Stay still on red
+Go on green
+)
+
 )
 
 $(P
-typical FSM, rewrite with continue
+This program implements typical $(I State Machine).
+$(I State Machine) is conceived as an abstract machine
+that can be in one of a finite number of states.
+
+Using `foreach` loop we call `switch (light)` 3 times.
+Each time we get into one of 3 blocks associated with
+different cases, inside each block light switches to
+next one in the sequence, or in terms of $(I State Machine) changes
+its state.
 )
+
