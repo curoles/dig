@@ -23,24 +23,85 @@ enum QuantityId : uint
     Mass,
     Temperature,
 
-    Area
+    Area,
+    Volume,
+    Velocity
 }
 
-alias Quantity = Tuple!(QuantityId, "id", int, "L", int, "T", int, "M", int, "Temp");
+alias Q = QuantityId;
 
-enum Quantity Length = tuple(QuantityId.Length, 1, 0, 0, 0);
-enum Quantity Area   = tuple(QuantityId.Area,   2, 0, 0, 0);
+alias Dimension = Tuple!(
+    int, "L",
+    int, "T",
+    int, "M",
+    int, "Temp"
+);
+
+pure Dimension combineDimension(string op)(in Dimension a, in Dimension b)
+{
+    Dimension c = a;
+    foreach (field; Dimension.fieldNames) {
+        mixin("c."~field~" "~op~"= b."~field~";");
+    }
+    return c;
+}
+
+pure Dimension mul(in Dimension a, in Dimension b)
+{
+    return combineDimension!"+"(a, b);
+}
+
+pure Dimension div(in Dimension a, in Dimension b)
+{
+    return combineDimension!"-"(a, b);
+}
+
+alias Quantity = Tuple!(QuantityId, "id", Dimension, "dim");
+
+pure Dimension mul(in Quantity a, in Quantity b){
+    return a.dim.mul(b.dim);
+}
+
+pure Dimension div(in Quantity a, in Quantity b){
+    return a.dim.div(b.dim);
+}
+
+/*struct QuantityProxy
+{
+Quantity _q;
+this(Quantity q) { _q = q; }
+Dimension opBinary(string op)(Quantity rhs)
+{
+    static if (op == "*") return _q.mul(rhs.dim);
+    else static if (op == "/") return _q.div(rhs.dim);
+    else static assert(0, "Operator "~op~" not implemented");
+}
+}*/
+
+enum Quantity Length = tuple(QuantityId.Length, tuple(1, 0, 0, 0));
+enum Quantity Area   = tuple(QuantityId.Area,   tuple(2, 0, 0, 0));
+enum Quantity Volume = tuple(QuantityId.Volume, Area.mul(Length));
 
 unittest
 {
     static assert (Length.id == QuantityId.Length);
+    static assert (Volume.dim.L == 3);
 }
 
-enum Quantity Temperature  = tuple(QuantityId.Temperature, 0, 0, 0, 1);
+enum Quantity Temperature  = tuple(QuantityId.Temperature, tuple(0, 0, 0, 1));
 
 unittest
 {
     static assert (Temperature.id == QuantityId.Temperature);
-    static assert (Temperature.Temp == 1 && Temperature.L == 0);
+    static assert (Temperature.dim.Temp == 1 && Temperature.dim.L == 0);
+}
+
+enum Quantity Time = tuple(QuantityId.Time, tuple(0, 1, 0, 0));
+
+enum Quantity Velocity = tuple(QuantityId.Velocity, Length.div(Time));
+
+unittest
+{
+    static assert (Velocity.dim.L == 1 && Velocity.dim.T == -1);
 }
 
