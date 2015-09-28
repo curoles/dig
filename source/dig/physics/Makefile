@@ -4,8 +4,15 @@ PHYS_SRC := $(PHYS_DIR)/realnum.d
 PHYS_SRC += $(PHYS_DIR)/quantity.d
 PHYS_SRC += $(PHYS_DIR)/temperature.d
 
+PHYS_OPTS := $(PHYS_SRC)
+PHYS_OPTS += -w
+PHYS_OPTS += -lib
+#PHYS_OPTS += -H -Hd$(BLD_DIR) -Hf$(BLD_DIR)/physics.di
+PHYS_OPTS += -unittest
+PHYS_OPTS += -od$(BLD_DIR) -oflibphysics -op $(DMD_GENDOC)/physics
+
 physics:
-	$(DC) -lib -unittest $(PHYS_SRC) -od$(BLD_DIR) -oflibphysics -op $(DMD_GENDOC)/physics -w
+	$(DC) $(PHYS_OPTS)
 
 
 

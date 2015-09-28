@@ -19,6 +19,7 @@ TBOX += $(DIG_DIR)/toolbox/wc.d
 
 
 BLD_DIR := ./bld
+INSTALL_DIR := $(BLD_DIR)/install
 
 DMD_GENDOC := -D -Dd$(BLD_DIR)/doc
 
@@ -35,6 +36,7 @@ clean:
 include $(SRC_DIR)/intro2programming/Makefile
 
 include $(DIG_DIR)/physics/Makefile
+include $(DIG_DIR)/toolbox/Makefile
 
 
 .PHONY: all clean

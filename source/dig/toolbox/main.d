@@ -2,6 +2,7 @@ import std.stdio;
 import std.path;
 
 import dig.toolbox.wc;
+import dig.toolbox.tc;
 
 int main(string[] args)
 {
@@ -10,12 +11,19 @@ int main(string[] args)
 
     string cmd_name = std.path.baseName(args[0]);
 
+    if (args.length > 2 && args[1] == "tool")
+    {
+        cmd_name = args[2];
+        args = args[2..args.length];
+        /*debug*/ writefln("args: %s", args);
+    }
+
     switch (cmd_name)
     {
         default: writeln("default"); break;
         case "wc": dig.toolbox.wc.wc(args); break;
+        case "tc": dig.toolbox.tc.tc(args); break;
     }
 
-    //dig.toolbox.wc.wc();
     return 0;
 }

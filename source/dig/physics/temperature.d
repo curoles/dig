@@ -57,11 +57,11 @@ Real KtoF(in Real temperatureK)
 
 enum Unit : ubyte {K, C, F}
 
-struct Temperature
+public struct Temperature
 {
     enum quantity = dig.physics.quantity.Temperature;
 
-private:
+public:
     Real value;
     Unit unit;
 
