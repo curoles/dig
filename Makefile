@@ -34,5 +34,7 @@ clean:
 
 include $(SRC_DIR)/intro2programming/Makefile
 
+include $(DIG_DIR)/physics/Makefile
+
 
 .PHONY: all clean
