@@ -3,6 +3,9 @@ PHYS_DIR := $(DIG_DIR)/physics
 PHYS_SRC := $(PHYS_DIR)/realnum.d
 PHYS_SRC += $(PHYS_DIR)/quantity.d
 PHYS_SRC += $(PHYS_DIR)/temperature.d
+PHYS_SRC += $(PHYS_DIR)/length.d
+PHYS_SRC += $(PHYS_DIR)/time.d
+PHYS_SRC += $(PHYS_DIR)/velocity.d
 
 PHYS_OPTS := $(PHYS_SRC)
 PHYS_OPTS += -w
