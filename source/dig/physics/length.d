@@ -36,7 +36,7 @@ public:
     Unit unit;
 
 public:
-    this(Real value, Unit unit) {this.value = value, this.unit = unit;}
+    this(Real value, Unit unit) {this.value = value; this.unit = unit;}
 
 public:
     @property Real m   (Real    m) { unit = Unit.m;    return value = m; }
@@ -68,7 +68,7 @@ public:
     Unit unit;
 
 public:
-    this(Real value, Unit unit) {this.value = value, this.unit = unit;}
+    this(Real value, Unit unit) {this.value = value; this.unit = unit;}
 
 public:
     @property Real m   (Real    m) { unit = Unit.m;    return value = m; }
@@ -113,7 +113,7 @@ public:
     Unit unit;
 
 public:
-    this(Real value, Unit unit) {this.value = value, this.unit = unit;}
+    this(Real value, Unit unit) {this.value = value; this.unit = unit;}
 
 public:
     @property Real m   (Real    m) { unit = Unit.m;    return value = m; }

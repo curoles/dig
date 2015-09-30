@@ -55,7 +55,37 @@ Real KtoF(in Real temperatureK)
     return temperatureK.KtoC.CtoF;
 }
 
+pure
+Real XtoX(in Real temp)
+{
+    return temp;
+}
+
 enum Unit : ubyte {K, C, F}
+
+alias ConvFun = pure Real function(in Real);
+
+static immutable
+ConvFun[Unit.max+1][Unit.max+1] convMatrix=
+[
+    //        K           C         F
+    /*K*/   [&XtoX,     &KtoC,   &KtoF],
+    /*C*/   [&CtoK,     &XtoX,   &CtoF],
+    /*F*/   [&FtoK,     &FtoC,   &XtoX]
+];
+
+pure Real convertValue(Real value, Unit from, Unit to)
+{
+    return convMatrix[from][to](value);
+}
+
+template generateProp(string name)
+{
+    const char[] generateProp =
+        "@property Real "~name~" (Real val) { unit = Unit."~name~"; return value = val; }"
+       ~"@property Real "~name~"() { return convertValue(value, unit, Unit."~name~"); }"
+        ;
+}
 
 public struct Temperature
 {
@@ -66,32 +96,22 @@ public:
     Unit unit;
 
 public:
-    @property Real K(Real tempK) { unit = Unit.K; return value = tempK; }
-    @property Real C(Real tempC) { unit = Unit.C; return value = tempC; }
-    @property Real F(Real tempF) { unit = Unit.F; return value = tempF; }
+
+    mixin( generateProp!"K" );
+    mixin( generateProp!"C" );
+    mixin( generateProp!"F" );
 
 
-    @property Real K() { final switch (unit) {
-        case Unit.K: return value;
-        case Unit.C: return CtoK(value);
-        case Unit.F: return FtoK(value);
-    }}
+    @property Real changeToK() { return K(K); }
+    @property Real changeToC() { return C(C); }
+    @property Real changeToF() { return F(F); }
 
-    @property Real C() { final switch (unit) {
-        case Unit.K: return KtoC(value);
-        case Unit.C: return value;
-        case Unit.F: return FtoC(value);
-    }}
+    Real changeUnit(Unit newUnit) {
+        value.convertValue(unit, newUnit);
+        unit = newUnit;
+        return value;
+    }
 
-    @property Real F() { final switch (unit) {
-        case Unit.K: return KtoF(value);
-        case Unit.C: return CtoF(value);
-        case Unit.F: return value;
-    }}
-
-    @property Real convertToK() { return K(K); }
-    @property Real convertToC() { return C(C); }
-    @property Real convertToF() { return F(F); }
 }
 
 unittest
