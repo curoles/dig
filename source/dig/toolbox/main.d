@@ -3,6 +3,7 @@ import std.path;
 
 import dig.toolbox.wc;
 import dig.toolbox.tc;
+import dig.toolbox.zip;
 
 int main(string[] args)
 {
@@ -23,6 +24,7 @@ int main(string[] args)
         default: writeln("default"); break;
         case "wc": dig.toolbox.wc.wc(args); break;
         case "tc": dig.toolbox.tc.tc(args); break;
+        case "zip": dig.toolbox.zip.zip(args); break;
     }
 
     return 0;

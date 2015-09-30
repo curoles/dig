@@ -3,6 +3,10 @@ TBOX_DIR := $(DIG_DIR)/toolbox
 TBOX := $(TBOX_DIR)/main.d
 TBOX += $(TBOX_DIR)/wc.d
 TBOX += $(TBOX_DIR)/tc.d
+TBOX += $(TBOX_DIR)/zip.d
+
+TBOX += $(DIG_DIR)/io/file.d
+TBOX += $(DIG_DIR)/idiom/block.d
 
 TBOX_OPTIONS := $(BLD_DIR)/libphysics.a $(TBOX)
 TBOX_OPTIONS += -I$(SRC_DIR)/source
