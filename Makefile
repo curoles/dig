@@ -14,9 +14,6 @@ SRC += $(DIG_DIR)/literal/ansiescape.d
 SRC += $(DIG_DIR)/io/file.d
 SRC += $(SRC_DIR)/source/main.d
 
-TBOX := $(DIG_DIR)/toolbox/main.d
-TBOX += $(DIG_DIR)/toolbox/wc.d
-
 
 BLD_DIR := ./bld
 INSTALL_DIR := $(BLD_DIR)/install
@@ -25,10 +22,9 @@ DMD_GENDOC := -D -Dd$(BLD_DIR)/doc
 
 #-v -deps
 
-all: $(SRC) $(TBOX)
+all: $(SRC) 
 	@echo Compiling with $(DC)
 	$(DC) -unittest $(SRC)  -od$(BLD_DIR) -of$(BLD_DIR)/test    -op $(DMD_GENDOC)/dig
-	$(DC) -unittest $(TBOX) -od$(BLD_DIR) -of$(BLD_DIR)/toolbox -op $(DMD_GENDOC)/toolbox
 
 clean:
 	rm -rf $(BLD_DIR)/*
