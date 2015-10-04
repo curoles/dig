@@ -41,6 +41,7 @@ I2PR +=   $(I2PR_DIR)/ch5/map.ddoc.d
 I2PR += $(I2PR_DIR)/ch6/ch6.ddoc.d
 I2PR += $(I2PR_DIR)/ch7/ch7.ddoc.d
 I2PR += $(I2PR_DIR)/ch8/ch8.ddoc.d
+I2PR +=   $(I2PR_DIR)/ch8/sqrt.ddoc.d
 I2PR += $(I2PR_DIR)/ch9/ch9.ddoc.d
 I2PR += $(I2PR_DIR)/ch10/ch10.ddoc.d
 I2PR += $(I2PR_DIR)/ch11/ch11.ddoc.d

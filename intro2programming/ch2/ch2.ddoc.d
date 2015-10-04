@@ -1,4 +1,4 @@
-$(H1 Chapter 2. Types)
+$(CHAPTER ch2, Chapter 2. Types)
 
 $(P
 Every thinkable thing, that is every thing we can think about,

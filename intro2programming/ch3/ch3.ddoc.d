@@ -1,4 +1,4 @@
-$(H1 Chapter 3. Execution Flow)
+$(CHAPTER ch3, Chapter 3. Execution Flow)
 
 $(P
 This chapter is mainly about two things computers can do:
