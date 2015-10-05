@@ -67,3 +67,41 @@ void main()
 }
 ---
 )
+
+$(P
+When we defined variable `scaleOffset` as `immutable` we told that
+no matter what its value can't change. But even though its value can not
+be changed this variable still has a storage for its value in computer memory.
+Literals do not have to have a storage, but variables do.
+In D and and in many other languages you can get a $(I reference)
+to a variable that is essentially the address of where the variable is
+stored in the memory.
+Why would we need it?
+Imagine that you have made a humangous custom type
+that takes a lot of memory to store. Then you write some functions
+that have this type as an argument and figure out that it implies
+copying big chunks of memory.
+To avoid this copying every time a function is called you can send
+variable by its reference instead of by value.
+Keyword `ref` is used ... 
+)
+
+$(P
+When you send a variable by value the receiving function operates
+with a copy of the variable. If you send it by reference then
+the function operates with the variable itself; in this case
+you may need to protect the variable from any changes, for
+that put keyword `const` in front of the argument.
+---
+ReturnType
+
+---
+)
+
+$(P
+---
+immutable int scaleOffset = 32;
+---
+enum int scaleOffset = 32;
+
+)
