@@ -1,15 +1,29 @@
-$(H1 Chapter 4. Functions)
+$(CHAPTER ch4, Chapter 4. Functions)
 
 $(P
-Humans learn routines and memorize them.
-Then they use learned routines when needed.
-If we translate it to the programming terms,
-then routine becomes $(I function) and
-using routine becomes $(I calling function).
+People learn routines and memorize them
+to use them later on in different situtions.
+Our daily routines are small well defined and separated tasks that we
+know how to execute; our bigger actions or routines
+exploit smaller routines as building blocks.
+Similarly, in computer science a $(I routine) or a $(I function)
+is a set of instructions that perform very certain task or sub-task.
 )
 
 $(P
-Function is extremly useful abstraction:
+Functions in programming are the building blocks.
+To use a function you have to $(I call) it.
+Calling a function is like you saying that at some particular moment during
+the execution you want to execute code of the funtion
+and once the function code is executed you want to return
+back to the point where it was called.
+By calling one function from inside another function you
+can build complex functionality.
+)
+
+$(P
+Following is a list of some reasons why
+$(I function) is extremly useful abstraction in computer science:
 $(UL
 $(LI
 If we split one big monioithic program into pieces and
@@ -18,9 +32,9 @@ much more readable and easy to undestand.
 )
 $(LI
 Once a big monilithic program is split into functions,
-we can get rid of duplicates, that is functions that do
+we automatically get rid of duplicates, that is pieces of code that do
 the same things. It might significantly reduce total
-amount of code. 
+amount of code and improve quality of the code. 
 )
 $(LI
 Calling a $(I function) is similar to using a verb in a native language.
@@ -53,14 +67,4 @@ is simplier than whole task and therefore easier to solve and test the solution.
 )
 )
 
-$(P
-defining a function
-)
 
-$(P
-operator=function
-)
-
-$(P
-operator overloading
-)

@@ -97,6 +97,82 @@ double iterativeSqrt(double number)
 )
 
 $(P
+Line `ResultRange range = ResultRange(number);` defines variable `range`.
+When the variable is constructed its range is [0, N] where N is number that
+square root we are calculating.
+Then goes `do {...} while ( range.span/range.middle > 0.001 );` loop; inside this
+loop we iterativly shrink the range of possible solutions; while condition
+says that we do not want to stop iterating untill size or the range is not
+small enough compare to its middle point that is the solution,
+in other words we want precision of the solution to be not less than 0.1%.
+The code inside of the loop implements devised algorithm.
+Each time we select the middle of the range `double sroot = range.middle;`.
+Then we compare its square with N `if ( (sroot * sroot) >= number )`;
+if the condition is true then we replace upper boundary of the range
+with its middle, because we overshoot, otherwise we replace
+lower boundary with middle point, becase we undershoot.
+)
+
+$(P
+All is left for us to do is to code `struct ResultRange`.
+This structure holds two data fields for lower and upper
+range boundaries:
+---
+struct ResultRange
+{
+    double lowerBoundary, upperBoundary;
+...
+}
+---
+Get properties for these two values are trivial:
+---
+    @property double lower() { return lowerBoundary; }
+    @property double upper() { return upperBoundary; }
+---
+Additionaly we define a property that returns size or span of the range:
+---
+@property double span() { return upperBoundary - lowerBoundary; }
+---
+and property that returns middle point of the range:
+---
+    @property double middle()
+    in { assert (upperBoundary >= lowerBoundary); }
+    body {
+        return lowerBoundary + span/2;
+    }
+---
+
+Set properties are pretty trivial too, we just assign new value either
+to lower or upper boundary:
+---
+    @property double lower(double newBoundary)
+    in { assert(newBoundary <= upperBoundary); }
+    body {
+        return lowerBoundary = newBoundary;
+    }
+
+    @property double upper(double newBoundary)
+    in { assert(newBoundary >= lowerBoundary); }
+    body {
+        return upperBoundary = newBoundary;
+    }
+---
+
+Proper initialization of the range is done by function `reset`
+that is also called inside the constructor:
+---
+    void reset(double number) {
+        lowerBoundary = 0;
+        upperBoundary = number;
+    }
+
+    this(double number) { reset(number); }
+---
+)
+
+$(P
+Putting all pieces together we get the program that iterativly
+finds an approximation for &radic;N.
 ---
 import std.conv;
 import std.stdio;
@@ -168,4 +244,8 @@ void main(string[] args)
     writefln("sqrt(%f)=%f", number, sqrtResult);
 }
 ---
+)
+
+$(P
+Now the fun part, let us check how it works.
 )

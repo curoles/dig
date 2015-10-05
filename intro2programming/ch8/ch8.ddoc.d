@@ -1,4 +1,4 @@
-$(H1 Chapter 8. Algorithms)
+$(CHAPTER ch8, Chapter 8. Algorithms)
 
 $(P
 The word $(I algorithm) came from mathematics.
@@ -16,7 +16,7 @@ There are many types of problems and corresponding algorithms.
 If you think about it, it is not possible for a programmer
 (unless she is Hollywood movie character) to
 have knowledge in all knowledge domains like math, physics, construction and etc.
-In order to have the work done usuall a programmer:
+In order to have the work done usually a programmer:
 $(UL
 $(LI
 first searches for available algorithms that were developed by experts

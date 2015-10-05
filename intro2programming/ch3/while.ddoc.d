@@ -9,3 +9,7 @@ something. The syntax is following:
 while ( ConditionIsTrue ) { Statements }
 ---
 )
+
+$(P
+do while
+)
