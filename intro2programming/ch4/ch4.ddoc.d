@@ -37,26 +37,28 @@ the same things. It might significantly reduce total
 amount of code and improve quality of the code. 
 )
 $(LI
+Concept of a function as an unit of an action is close to
+how we people think.
 Calling a $(I function) is similar to using a verb in a native language.
 A verb implies an action, and function implies an action.
 We think in terms of actions taking place in space and having time durating.
 Because of that it is very natural for humans to use functions
 while writing programs; it is easy to understang that a $(I function)
-deals with some data, in other words, processes input data and may
+deals with some input and output data, in other words, processes input data and may
 return some data as a result, and that to execute a function takes some
 time, some computer resources. 
 )
 $(LI
-But $(I function) is not only an abstraction easy for us to understand,
+But $(I function) in conputer schience is not only an abstraction easy for us to understand,
 it also very close to what is called a function in mathematics.
 Therefore many mathematical methods could be applied to programming
 with functions, many things could be rigorously formulated and proved;
 in other words, reasoning about a program becomes more of a schience.
 )
 $(LI
-Thinking in terms of functions is also very pracktical.
-Someone wrote a function, if it generic enough then everyone can use it,
-this idea found its application in so called $(I libraries).
+Thinking in terms of functions is also very practical.
+Someone wrote a function, if it generic enough then everyone else can also use it.
+This idea finds its application in so called code $(I libraries).
 Some people write libraries full of functions and others just use them,
 instead of repeating work again and again;
 that facilitates constant progress as people solve new tasks instead of

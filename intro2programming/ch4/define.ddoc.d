@@ -1,7 +1,8 @@
 $(H2 Defining a Function)
 
 $(P
-Here is how a function is defined in D:
+Here is how a function is defined in D with an example of a function called sum
+that adds two numbers and return the result:
 ---
 // ReturnValue FunctionName( Arguments ) { Statements; }
 //     ↓             ↓        ↓     ↓               ↓
@@ -21,11 +22,24 @@ $(LI
 Then in parenthesis go function arguments.
 )
 $(LI
-Then inside the curly brackets body of the function,
-that is what code statements implementing what the function does.
+Then inside the curly brackets body of the function.
+The body of the function is a list of instructions
+that actually implement required functionality.
 )
 )
 
+)
+
+$(P
+arguments
+)
+
+$(P
+return
+)
+
+$(P
+calling function
 )
 
 $(P

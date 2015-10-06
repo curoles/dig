@@ -22,13 +22,6 @@ is allocated for it.
 )
 
 $(P
-$(B Advanced.)
-You can create your own literals in D language.
-Appendix ? shows an example of $(B daytime) literal that allows
-to express time of a day in seconds as a string "h:m:s".
-)
-
-$(P
 Any literal is constant by definition. If you see number `777` in a program text,
 then it means nothing more and nothing less than number 777, number 777 can't be
 any other number by definition. But most of real world programs and algorithms

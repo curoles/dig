@@ -100,8 +100,4 @@ entire sense; make a note of it and move on, return to it later
 when more things about programming are understood.
 )
 
-$(P
-For those readers who feel ready to tackle more advanced D code,
-there are references throughout the text
-to appendixes with some interesting code snippets.
-)
+
