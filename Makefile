@@ -7,6 +7,7 @@ DIG_DIR := $(SRC_DIR)/source/dig
 SRC := $(DIG_DIR)/traits/abstract_entity.d
 SRC += $(DIG_DIR)/traits/identity.d
 SRC += $(DIG_DIR)/traits/package.d
+SRC += $(DIG_DIR)/traits/procedure.d
 SRC += $(DIG_DIR)/idiom/block.d
 SRC += $(DIG_DIR)/idiom/times.d
 SRC += $(DIG_DIR)/literal/daytime.d

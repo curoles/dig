@@ -1,4 +1,4 @@
-module foundation.traits.misc;
+module dig.traits.misc;
 
 
 import std.traits;
