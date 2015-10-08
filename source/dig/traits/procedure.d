@@ -81,6 +81,7 @@ template isRegularProcedure(alias T)
     enum auto functionAttributes = [ __traits(getFunctionAttributes, T)[] ];
     enum bool isPure = canFind(functionAttributes, "pure");
 // TODO check that all arguments are const or immutable refs, or values
+//ref comes with attribute of the function (see template functionAttributes).
 // TODO member function? check attr const|immutable?
 
     enum bool isRegularProcedure = isPure;
@@ -146,6 +147,10 @@ template isFunctionalProcedure(alias T)
         //pragma(msg, "functional procedure must have arity > 0");
         enum bool isFunctionalProcedure = false;
     }
+    else static if (is(ReturnType!T == void))
+    {
+        enum bool isFunctionalProcedure = false;
+    }
     else
     {
 // no out, inout args
@@ -169,5 +174,15 @@ unittest
     pure auto sum(int a, int b) { return a + b; }
 
     static assert ( isFunctionalProcedure!sum );
+}
+
+
+///
+unittest
+{
+    pure void fun(int a, int b) { auto c = a + b; }
+    static assert (is(ReturnType!fun == void));
+
+    static assert ( !isFunctionalProcedure!fun );
 }
 
