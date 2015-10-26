@@ -9,7 +9,7 @@ A $(I variable) has a name and some value assigned to it that might
 change in time.
 We use name of a variable as its tag by which we refer to variable.
 Since we can assign any value to a variable, then it implies that
-variable is some sort of memory storage.
+a variable is some sort of memory storage.
 )
 
 $(P
@@ -24,8 +24,8 @@ unluckyNumber = luckyNumber; // Value of unluckyNumber is 777 now.
 )
 
 $(P
-Programmer can assign any name to a variable as long as it is
-one word, that is no spaces are allowed in name of a variable.
+A programmer can assign any name to a variable as long as it is
+one word, that is no spaces are allowed in the name of a variable.
 By the way, as you might have already noticed space is used as the separator
 between words in program text, similarly to English text.
 )
@@ -45,7 +45,7 @@ Declaration of a variable in D language looks like:
 // TypeName VariableName;
     int     luckyNumber;
 ---
-We also can simulataniously declare variable and assign a value to it:
+We also can simulataniously declare a variable and assign a value to it:
 ---
 // TypeName VariableName = Value;
     int     luckyNumber  =  777;
@@ -55,7 +55,7 @@ We also can simulataniously declare variable and assign a value to it:
 $(P
 So we can give our names to types and variables.
 Anything else? Yes, we can also give a $(I function) any name we want.
-$(I Function) is a variable too, but instead of storing data like
+A $(I function) is a variable too, but instead of storing data like
 number or string it stores instructions. Because of that,
 most programming languages treat functions differently than just variables.
 )

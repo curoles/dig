@@ -59,7 +59,7 @@ a lot of individually simple commands mixed together.
 
 $(P
 There is one more thing to discuss in regard to "what computer does".
-As was said before, your program could be $(I compiled) by a $(I compiler) into machine
+As it was said before, your program could be $(I compiled) by a $(I compiler) into machine
 code that computer executes directly or $(I interpreted) by a program
 called $(I interpreter).
 We can run our D programs in both ways, but in this book we are

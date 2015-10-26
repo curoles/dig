@@ -9,7 +9,7 @@ for himself, they are called $(I comments).
 
 $(P
 It is important to understand that programs usually live
-quite long life. Programs gets modified and improved many
+quite a long life. Programs gets modified and improved many
 times before they come out of use. To facilitate reading
 and re-writing programmers use comments. Comments are usually
 English text with short notes explaining things that are
@@ -33,7 +33,7 @@ showing the "big" ideas behind the design or algorithm
 or why things done this way.
 )
 $(LI
-Large-scale software project have many components that
+Large-scale software projects have many components that
 are designed to work together. Sometimes it could be very hard
 to deduce the design by looking on how components are
 using each other; well placed comments can save time.
@@ -70,19 +70,19 @@ This choice of symbols to mark where comments are in code is not accidental.
 In D and in many other languages, symbol `/` is used as division operator
 and `*` as multiplication.
 Both operators are binary, that is they require 2 operands: `a*b` and `a/b`.
-It is not possible to write valid expression where 2 divisions follow
+It is not possible to write a valid expression where 2 divisions follow
 each other or when division and multiplication stay together.
 )
 
 $(P
 Good comments have a great value, but comments should not explain trivial
-points of your program. The best advise for making understandable code
+points of your program. The best advise for making an understandable code
 is to use good names.
 
 We are going to learn about variables, their type and also about functions;
 we can name them whatever we like.
 But if we give meaningless names to things in our code
-then our code becomes unreadable, that is the code is hard to understand,
+then our code becomes unreadable, that is the code that is difficult to understand,
 hard to figure out what is going on and what is what.
 
 The recommendation for good naming is simple:

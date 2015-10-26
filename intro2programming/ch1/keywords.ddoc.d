@@ -15,7 +15,7 @@ $(P
 The last thing in language syntax we are going to cover
 in this chapter is called $(I keywords).
 $(I Keywords) is a group of special words recognized by the computer language.
-They form language vocabulary that programmer is using
+They form a language vocabulary that programmer uses
 to do the basic things and thus they are the very foundation of the language.
 
 This vocabulary is small, couple dozens words,
@@ -45,6 +45,6 @@ Keyword `import` allows to use code defined in other file or module.
 )
 
 $(P
-There are other keywords, but we will learn them later, once we need
+There are other keywords, but we will learn them later on, once we need
 them.
 )

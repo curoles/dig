@@ -7,8 +7,8 @@ to be able to write our first program.
 It will be a program that converts temperature in Fahrenheit to Celsius.
 We tell to our program a temperature in Fahrenheit as a number,
 in return the program prints out corresponding number in degrees Celsius.
-Additionally, the program says if is the temperature below water freezing point
-and shows small °F to °C conversion table around the point of interest.
+Additionally, the program says if the temperature is below water freezing point
+and it shows small °F to °C conversion table around the point of interest.
 )
 
 $(P
@@ -85,13 +85,13 @@ You will see the program's code and its output right away.
 If you want to run it yourself then click $(B Fork) in panel $(B Actions).
 )
 $(LI
-The view changes and now you can see button $(B Run), press on it.
-Program is going to be compiled and then run.
+The view changes and now you can see the $(B Run) button, press on it.
+The program is going to be compiled and then ran.
 )
 $(LI
-On the $(B Input/Output) panel find tab $(B Input) and change input
+On the $(B Input/Output) panel find $(B Input) tab and change the input
 value for temperature in Fahrenheit to something else.
-Press button $(B Run) again to see new output.
+Press the $(B Run) button again to see new output.
 )
 )
 )
@@ -141,10 +141,10 @@ of water freezing condition. (Thing #1).
 )
 
 $(P
-`void main() { ... }` defines function that will be called first when we
+`void main() { ... }` defines the function that will be called first when we
 run our program, by an agreement its name must be "main".
 This function returns `void` which means "nothing".
-Parenthesis are empty because there are not parameters to the function.
+The parenthesis are empty because there are no parameters to the function.
 The code or body of the function must be surrounded by `{` and `}`.
 )
 
@@ -153,7 +153,7 @@ $(P
 )
 
 $(P
-`readf("%d", &temperatureF);` read user input and store it into variable `temperatureF`.
+`readf("%d", &temperatureF);` read user input and store it into a variable `temperatureF`.
 (Thing #5).
 )
 
@@ -175,14 +175,14 @@ otherwise we assign false to it with `else {freezingCold = false;}`.
 
 $(P
 `writefln("Temperature %d °F = %s Celsius, freezing? %s", ...);` prints out temperature
-in F and C, also if it is water freezing condition.
+in F and C, also if water is in freezing condition.
 (Thing #5).
 )
  
 $(P
 `foreach (offset; -3..4) { /*RepeatThisBlock*/ }` says that we want to
 go through each number in range [-3,4$(RPAREN), that is -3,-2,-1,0,1,2,3,
-on each iteration assign that number to variable called `offset`,
+on each iteration assign that number to a variable called `offset`,
 and execute block of instructions between curly brackets `{` and `}`.
 (Thing #4).
 )

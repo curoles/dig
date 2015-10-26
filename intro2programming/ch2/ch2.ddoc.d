@@ -13,7 +13,7 @@ however each real table is different.
 $(P
 Similar to how humans think in term of types, programming languages
 have concept of $(I type) for every object they deal with.
-For example in D, an integral number variable has type `int`,
+For example, in D, an integral numeric variable has type `int`,
 a string of characters has type `string`,
 a real number has type `float`.
 Implicitly or explicitly but every object in a program

@@ -5,34 +5,36 @@ Basic type $(B float) is for a programmer to operate with what
 in math called $(I real) numbers.
 There is another similar type called $(B double), it is bigger
 than $(B float) (more storage space) and therefore provides better precision.
-Since big procentage of all
+Since big percentage of all
 computer programs is engineering programs that do calculations,
 let us have a closer look at these types.
 )
 
 $(P
 But before we continue discussing floating point types,
-let us make a small step sideway to meet very usefull
-D language keyword $(B assert). $(B assert) is special
+let us make a small step sideway to make acquaintance with very useful
+D language keyword $(B assert). $(B assert) is a special
 function that might abort execution of a program
 depending on its argument, if the argument evaluates to true
-then execution continues, otherwise it gets aborted.
+then the execution continues, otherwise it gets aborted.
 
 From now on we are going to use $(B assert) a lot in our code,
-it is more convinient than
+it is more convenient than
 using $(B if-else) and printing information to terminal.
 )
 
 $(P
 Floating point literals are real numbers and usually have
 decimal point. If you do not use decimal point then put letter $(B F)
-after the last digit of the literal. When a number is too big
-or too small, or if you just prefer to use scintific notation,
-add letter $(B e) and integral power number to the end of the literal,
-$(B e) stays for exponent.
+after the last digit of the literal to specify that you want it to be
+treated as real not integral number. When a number is too big
+or too small and has too many zeros before or after decimal point,
+or if you just prefer to use scientific notation,
+add letter $(B e) and integral power number to the end of the literal.
+$(B e) stays for $(B e)xponent.
 
 Below is a small snippet
-of D code that demostrates floating point literals and variables.
+of D code that demonstrates floating point literals and variables.
 ---
 void main()
 {

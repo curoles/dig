@@ -1,9 +1,9 @@
 $(H2 Operators)
 
 $(P
-$(I Operators) came to programming languages from mathemitics.
+$(I Operators) came to programming languages from mathematics.
 They are responsible for calculations and logical operations and
-thus fall into category $(I Thing #2: "Count number") of $(I The 5 Things)
+thus fall into the category $(I Thing #2: "Count number") of $(I The 5 Things)
 computers do.
 )
 
@@ -15,7 +15,7 @@ $(LI
 Safe to say that any program uses mathematical or logical operations.
 )
 $(LI
-People already know them well and recognize immediately.
+People already know them well and recognize them immediately.
 Everyone understands that `c = a + b` means that `c` is equal
 to sum of `a` and `b`.
 )
@@ -76,7 +76,7 @@ Bitwise operators
 $(P
 At first glance operators do not look like anything we learned so far.
 But conceptually an operator is just a function. For example,
-binary operator `+` with two integer operands could be replaced with
+a binary operator `+` with two integer operands could be replaced with
 a function like this:
 ---
 // ReturnValue FunctionName Operand1 Operand2

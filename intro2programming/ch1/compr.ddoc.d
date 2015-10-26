@@ -20,7 +20,7 @@ somewhat similar to reasons why we do not use English in Algebra:
 $(UL
 $(LI
 It is too verbose (programmers would say: "noisy"), it was made
-to be spoken out and heard by human ear,
+to be spoken out loud and heard by a human ear,
 not for computers to understand.
 )
 $(LI
@@ -41,7 +41,7 @@ be good for lawyers and philosophers, but not programmers$(RPAREN)
 $(P
 We already know two languages: human native language English
 and the language of mathematical notations of Algebra.
-Let us have a look what are main constructs in these two languages. 
+Let us have a look what are the main constructs in these two languages. 
 A text written in English language has:
 $(UL
 $(LI words)
@@ -54,7 +54,7 @@ $(P
 In Algebra we use:
 $(UL
 $(LI numbers)
-$(LI words, usually as short as one letter, to give symbol a name,
+$(LI words, usually as short as one letter, to give a symbol a name,
 for example 'x')
 $(LI special symbols for operations, for example '=','+')
 )
@@ -77,7 +77,7 @@ combinations of keywords and symbols that are allowed.
 )
 $(LI
 Defines what each grammatical structure exactly means.
-It is relativly easy tasks because the grammar is simplified and the
+It is a relativly easy tasks because the grammar is simplified and the
 "vocabulary" is very short.
 )
 )
