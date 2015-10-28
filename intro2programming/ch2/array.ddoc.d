@@ -5,7 +5,7 @@ People deal with collections of things all the times.
 We call collections by different names: bunch, pile,
 set, array and etc.
 Naturally, all computer languages support collections.
-The most straighforward and easy to understand
+The most straightforward and easy to understand
 collection type in D is $(I array).
 )
 
@@ -31,7 +31,7 @@ void main()
 
   apples[0] = 10; // first apple weights 10.
   apples[1] = 12; // second apple weights 12.
-  apples[2] = 11; // third apple weights 12.
+  apples[2] = 11; // third apple weights 11.
 //apples[3] = 13; // Error. Static array 'apples' does not have element #3.
 
   float sum = 0;
@@ -42,15 +42,16 @@ void main()
     sum += weight;
   }
 
-  writefln("mean weight is %d", sum / apples.length);
+  writefln("mean weight is %f", sum / apples.length);
 }
 ---
 
 Application output:
 $(PRE
-a[0] = 1
-a[1] = 2
-a[2] = 3
+weight of apple #0 is 10.0
+weight of apple #1 is 12.0
+weight of apple #2 is 11.0
+mean weight is 11.000000
 )
 )
 
@@ -66,7 +67,7 @@ import std.stdio;
 
 void main()
 {
-  int[] apples; // dynamic array
+  float[] apples; // dynamic array
   assert (apples.length == 0);
   apples ~= 1; // increase array's size by 1 and assign value 1 to the last element
   assert (apples.length == 1);
@@ -74,9 +75,16 @@ void main()
   apples ~= 3;
 
   foreach (index, weight; a) {
-    writefln("weight of apples #%d if %.1f", index, weight);
+    writefln("weight of apple #%d if %.1f", index, weight);
   }
 
 }
 ---
+
+Application output:
+$(PRE
+weight of apple #0 if 1.0
+weight of apple #1 if 2.0
+weight of apple #2 if 3.0
+)
 )

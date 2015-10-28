@@ -15,7 +15,7 @@ But before we continue discussing floating point types,
 let us make a small step sideway to make acquaintance with very useful
 D language keyword $(B assert). $(B assert) is a special
 function that might abort execution of a program
-depending on its argument, if the argument evaluates to true
+depending on its argument. If the argument evaluates to true
 then the execution continues, otherwise it gets aborted.
 
 From now on we are going to use $(B assert) a lot in our code,
@@ -38,11 +38,20 @@ of D code that demonstrates floating point literals and variables.
 ---
 void main()
 {
-  static assert (is(typeof(3.14) == double)); // By default type double with higher precision is used.
-  static assert (is(typeof(3.14F) == float)); // Letter F in 3.14F tells that we want this number to be float.
-  static assert (is(typeof(3) == int));       // Number is integer if no decimal point or letter F.
-  static assert (is(typeof(3F) == float));    // No decimal point, but letter F is present.
-  float pi = 3.14;                            // Variable pi initialized with 3.14.
+  // By default type double with higher precision is assumed for the floating literal.
+  static assert (is(typeof(3.14) == double));
+
+  // Letter F in 3.14F tells that we want this number to be float.
+  static assert (is(typeof(3.14F) == float));
+
+  // Literal number is integer if no decimal point or letter F is present.
+  static assert (is(typeof(3) == int));
+
+  // No decimal point, but letter F is present.
+  static assert (is(typeof(3F) == float));
+
+  // Variable pi initialized with 3.14.
+  float pi = 3.14;
   static assert (is(typeof(pi) == float));
 
   float anotherPi = 0.0314e2;   // Means 0.0314*10^2
@@ -58,7 +67,7 @@ Some readers may have noticed that our first programs that converts temperature
 from degrees Fahrenheit to Celsius has problems. When integer variable `temperatureF`
 gets multiplied by (5/9) the result is rational number, but when that
 rational numbers is assigned to integer variable `temperatureC`
-the number gets rounded and we loose precision.
+the number gets rounded to integer and we loose precision.
 Let us fix it by using type $(B float) instead of type $(B int).
 )
 
@@ -67,7 +76,8 @@ Link to the code $(LINK http://dpaste.dzfl.pl/87849672359e).
 ---
 // Fahrenheit to Celsius converter. Formula: T(°C) = (T(°F) - 32) × 5/9
 
-import std.stdio; // Use library that will help our program to interract with a user.
+// Use library that helps our program to interact with a user.
+import std.stdio;
 
 float temperatureF = 71; // Storage for temperature in F.
 float temperatureC;      // Storage for temperature in C.
@@ -82,7 +92,7 @@ void main()
     writeln("Input temperature in F:");
     readf("%f", &temperatureF);
     
-    temperatureC = ((temperatureF - scaleOffset) * 5 ) / 9; // Convertion from F to C.
+    temperatureC = ((temperatureF - scaleOffset) * 5 ) / 9; // Conversion from F to C.
     
     if (temperatureC < 0) { // water freezes at 0 degrees Celsius.
       freezingCold = true;
