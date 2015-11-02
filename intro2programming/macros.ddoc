@@ -48,6 +48,8 @@ D_INLINECODE = <code style="display:inline;background-color:yellow;" class="d_in
 
 D_CODE       = <pre style="background-color:lightyellow;" class="d_code">$0</pre>
 
+CN = <b style="font-family:monospace">$0</b>
+
 PRE = <pre>$0</pre>
 POW = <sup>$0</sup>
 SUB = <sub>$0</sub>

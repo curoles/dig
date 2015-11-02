@@ -22,7 +22,7 @@ For a computer act of chosing has two phases:
 $(OL
 $(LI
 Make calculations that result in a boolean value
-that can be $(B true) or $(B false).
+that can be $(CN true) or $(CN false).
 )
 $(LI
 Based on the result from phase 1, jump to execution of
