@@ -13,12 +13,12 @@ The Thing #3: Stay in a loop and repeat something.
 )
 
 $(P
-An ability to make choises is perhaps the most
-important part of any intellegence.
-Even simplest living organizms make their choices
+An ability to make choices is perhaps the most
+important part of any intelligence.
+Even simplest living organisms make their choices
 in order to survive and grow.
 But what does it mean for a computer to chose?
-For a computer act of chosing has two phases:
+For a computer act of choosing has two phases:
 $(OL
 $(LI
 Make calculations that result in a boolean value
@@ -32,10 +32,11 @@ one piece of code or another.
 )
 
 $(P
-Everything computer does is kept in its memory.
+Everything computer does is kept in its memory,
+that is a program resides in computer'a memory.
 One computer instruction follows another instruction
 back-to-back in the memory. Because of that,
-after computer executed currect instruction
+after computer executed current instruction
 it can just fetch next instruction from the memory
 and execute it and so on.
 
