@@ -18,7 +18,7 @@ important part of any intelligence.
 Even simplest living organisms make their choices
 in order to survive and grow.
 But what does it mean for a computer to chose?
-For a computer act of choosing has two phases:
+For a computer an act of choosing has two phases:
 $(OL
 $(LI
 Make calculations that result in a boolean value
@@ -33,22 +33,24 @@ one piece of code or another.
 
 $(P
 Everything computer does is kept in its memory,
-that is a program resides in computer'a memory.
+that is a program resides in computer's memory.
 One computer instruction follows another instruction
 back-to-back in the memory. Because of that,
-after computer executed current instruction
-it can just fetch next instruction from the memory
-and execute it and so on.
+after computer has executed current instruction
+it fetches next instruction from the memory
+and executes it and so on.
 
-When computer does this cycle: execute instruction,
-fetch next instruction and execute it, the execution flow is
+When computer repeats these cycles: fetch next instruction,
+execute fetched instruction, fetch next, execute and so on,
+we say that the execution flow is
 linear.
 
 It is caller linear because if you make a graph where
 x-axes is time $(B t)
 and y-axes is address of instruction, or $(I Instruction Pointer),
-then IP(t) function is linear one IP(t) = A*t + B, where B is beginning
-address of a program and A is size of one instruction.
+then $(CN IP(t)) function is linear function $(CN IP(t) = A*t + B),
+where $(CN B) is beginning
+address of a program and $(CN A) is size of one instruction.
 )
 
 $(P

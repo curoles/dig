@@ -1,8 +1,9 @@
 $(H2 Switch)
 
 $(P
-In a theory, no matter how complex is a choise, it can be handled with `if-else`.
-Note that `if-else` syntax allows to "chain" blocks like this:
+In a theory, no matter how complex is a choice, it can be handled with just $(CN if-else).
+Of course, complex logic will require many $(CN if-else).
+Note that $(CN if-else) syntax allows to "chain" blocks like this:
 ---
 if      ( Condition1 ) { Block1 }
 else if ( Condition2 ) { Block2 }
@@ -11,8 +12,8 @@ else if ( Condition3 ) { Block3 }
 else if ( ConditionN ) { BlockN }
 else                   { DefaultBlock }
 ---
-But code with many "chained" `else if` is hard to write and read.
-To handle multiple choise cases D has $(I switch statement).
+But code with too many "chained" $(CN if-else) is hard to write and read.
+To handle multiple choice cases D has $(I switch statement).
 Link to official documentation $(LINK http://dlang.org/statement.html#switch-statement).
 )
 
@@ -53,7 +54,8 @@ switch ( Selector )
 )
 
 $(P
-Let us write a program that simulates traffic light
+To demonstrate how $(CN switch) could be used,
+let us write a program that simulates traffic light
 that switches from yellow to red, then from red to green
 and from green back to yellow.
 ---
@@ -111,10 +113,11 @@ This program implements typical $(I State Machine).
 $(I State Machine) is conceived as an abstract machine
 that can be in one of a finite number of states.
 
-Using `foreach` loop we call `switch (light)` 3 times.
+Using keyword $(CN foreach) (will study it in next section)
+we create a loop where we call `switch (light)` 3 times.
 Each time we get into one of 3 blocks associated with
 different cases, inside each block light switches to
-next one in the sequence, or in terms of $(I State Machine) changes
-its state.
+next one in the sequence, or in terms of $(I State Machine)
+light changes its state.
 )
 

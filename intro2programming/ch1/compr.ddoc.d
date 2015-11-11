@@ -77,7 +77,7 @@ combinations of keywords and symbols that are allowed.
 )
 $(LI
 Defines what each grammatical structure exactly means.
-It is a relativly easy tasks because the grammar is simplified and the
+It is a relatively easy tasks because the grammar is simplified and the
 "vocabulary" is very short.
 )
 )
@@ -104,7 +104,7 @@ $(LI
 `=` means equal as in Algebra.
 )
 $(LI
-`;` means end-of-statement, it is equvuvalent of '.' at the end of
+`;` means end-of-statement, it is equivalent of '.' at the end of
 English sentence. All statements in D must end with ';'.
 )
 )

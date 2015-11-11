@@ -1,14 +1,14 @@
 $(H2 For)
 
 $(P
-It is possible to code any loop with just `while`,
+It is possible to code any loop with just $(CN while) and $(CN do-while),
 however there is one important case that deserves
 special approach.
 )
 
 $(P
 Consider a case when we have to repeat something
-some number of times:
+some number of times, like we had it above with switching the lights:
 ---
 int count = 0;
 while (count < 7)
@@ -19,11 +19,12 @@ while (count < 7)
 ---
 The code is perfectly legit but somewhat verbose.
 Also there is a chance that code `++count;` incrementing variable
-$(B count) can be missed by mistake
+$(CN count) can be missed by mistake
 or because some corner case was overlooked and execution
-does not get to that point.
-The better solution for this example would be to use keyword `for` or keyword `foreach`.
-With keyword `for` the code above could be rewritten as:
+does not get to the point where counter is incremented via `++count`.
+The better solution for this example would be to use keyword $(CN for)
+or keyword $(CN foreach).
+With keyword $(CN for) the code above could be rewritten as:
 ---
 for (int count = 0; count < 7; ++count)
 {
@@ -40,8 +41,8 @@ foreach (count; 0..7)
 )
 
 $(P
-`for` statement has three parts: initialization,
-conditions check and counter(s) incrementing.
+$(CN for) statement has three parts: initialization,
+conditions checking and counter(s) incrementing.
 ---
 //      Define      Condition  Statement   Block of 
 //       and         checked      to      statements
@@ -51,28 +52,28 @@ conditions check and counter(s) incrementing.
 for (int count = 0; count < 7; ++count)   { Block }
 ---
 
-Reasons why `for` is better than `while` for this particular
+Reasons why $(CN for) is better than $(CN while) for this particular
 simple example:
 $(OL
 $(LI
 It is slightly shorter.
 )
 $(LI
-Variable $(B count) is defined right when we need it, it exists
-only in the context of the block, once block is executed $(B count)
+Variable $(CM count) is defined right when and where we need it, it exists
+only in the context of the block, once block is executed $(CN count)
 ceases to exist.
 )
 $(LI
 It is clear for anyone that there are 3 separate actions: initialization
 of the counter, checking the counter and incrementign the counter.
-With `for` it is harder than with `while` to make a mistake.
+With $(CN for) it is harder than with $(CN while) to make a mistake.
 )
 )
 
 )
 
 $(P
-`foreach` statement has two parts: a range and
+$(CN foreach) statement has two parts: a range and
 a variable that holds value of current element of the range.
 ---
 //     Current  Range  Block of statements
@@ -80,12 +81,12 @@ a variable that holds value of current element of the range.
 //        ↓       ↓          ↓
 foreach (count; 0..7)   { Block }
 ---
-Why does D have `foreach` if there is `for` already?
-Because `foreach` provides higher abstraction than `for`.
-`for` helps you to walk through a sequence by incrementing
+Why does D have $(CN foreach) if there is $(CN for) already?
+Because $(CN foreach) provides higher abstraction than $(CN for).
+$(CN for) helps you to walk through a sequence by means of incrementing
 a counter, but it knows nothing about the sequence and therefore
 it is up to you to figure out correct code to iterate over the sequence.
-`foreach` on other hand knows about the sequence and does the walk
+$(CN foreach) on other hand knows about the sequence and does the walk
 in your behalf, all you have to do is to use current value from the
 sequence according to your task.
 )

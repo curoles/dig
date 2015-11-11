@@ -48,19 +48,19 @@ $(P
 Why this book is different from other "Programming for Kids" books?:
 $(UL
 $(LI
-It does not try to be playful. No silly, cartoonish pictures.
+The explanations are simple and often rely on common sense,
+nevertheless the overall tone is rather serious, author does not try to be playful
+and does not use cartoonish pictures.
 )
 $(LI
-It does not teach by trying to show tons of examples.
-Instead, it
-focuses on the most important concepts and tries to explain them
-in the simplest way.
+It focuses on the most important concepts and tries to explain them
+in the simplest way using short examples.
 )
 $(LI
-It does not try to convince a reader that programming is easy and fun,
-because it would be a misleading message. Instead, it shows that programming
+It shows that programming
 is an act of creation, a form of art that rewards the programmer proportionally
 to the effort a person puts into it.
+It shows benefits of creative and thoughtful approach to programming.
 )
 )
 )

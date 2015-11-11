@@ -5,7 +5,7 @@ $(BIG For Kids aged 12+)
 $(P
 by Igor Lesik
 $(BR)
-Version 1.000.1
+Version 1.000.3
 $(BR)
 Compilation date $(DATETIME)
 )

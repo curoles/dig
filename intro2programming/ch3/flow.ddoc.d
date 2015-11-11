@@ -1,17 +1,17 @@
 $(H2 Other Means to Control Flow)
 
 $(P
-`if`, `while` and `for` might look like ultimate solution
+Constracts $(CN if-else), $(CN while) and $(CN for) might look like ultimate solution
 for everything, but the matter is not that simple.
 Imagine you have a conversation with someone who in one
-sentence uses dozens of $(B if-then-while-once) and etc.,
+sentence uses dozens of $(CN if-then-while-once) and etc.,
 very soon you get lost, because it is too hard to keep
 track of too many conditions at once. We humans usually
 deal with it by way of using simple sentences and partitioning
 chunks of information. In programming it would correspond
 to code with:
 $(UL
-$(LI limited number of nested $(B if-else) or nested loops;)
+$(LI limited number of nested $(CN if-else) or nested loops;)
 $(LI functionality partitioned into many separate functions;)
 $(LI where each function does only one thing and its code is
 not too long so a reader does not get lost.)
@@ -53,8 +53,8 @@ void main()
 When there are no apples then you naturally pay nothing and thus
 total cost is going to be 0, so the code above handles this special
 case using `if (apples.length == 0) { ... } else { ... }`.
-But there is no need to handle this case any different from others.
-Indeed, when lenght of array $(B apples) is zero, then
+But if think about it, there is no real need to handle this case any different from others.
+Indeed, when lenght of array $(CN apples) is zero, then
 `apples.length * stateTaxPerApple` is 0 and `foreach (weight; apples)`
 does not loop at all. So the code can be safely rewritten as
 much shorter version:
@@ -79,7 +79,7 @@ void main()
 
 $(P
 Generally, one has to understand two things in order to write elegant
-code with as few $(B if-else) as possible:
+code with as few $(CN if-else) as possible:
 $(UL
 $(LI
 Sometimes "decision" about execution flow can be made in few different places in a code space,
@@ -89,7 +89,7 @@ $(LI
 Code has phases or times, first when you write code, then when code is compiled
 and prepared for execution, last when it actually runs.
 In terms of these 3 phases, try to make decision as early as possible to avoid
-doing everything with $(B if-else) at run time.
+doing everything with $(CN if-else) at run time.
 )
 )
 )
@@ -112,14 +112,14 @@ void main(string[] args)
     default: price = 0; // unknown fruit
     }
 
-    writefln("%s price per pound in %f", fruit, price);
+    writefln("%s price per pound is %f", fruit, price);
 }
 ---
 This program runs correctly and does what we want, but it can be coded
 in much better way.
 What the program essentially does is finding a value by a key,
-basically we deal with pairs of $(B key-value).
-Instead of using $(B switch) statement to find price
+basically we deal with pairs of $(CN key-value).
+Instead of using $(CN switch) statement to find price
 by name of a fruit we can express the pair in terms of associative
 array that works as a map that maps key to value.
 ---
@@ -130,35 +130,35 @@ void main(string[] args)
 
     float[string] price = ["apple":0.97, "orange":1.22, "grape":1.14];
 
-    writefln("%s price per pound in %f", fruit, price[fruit]);
+    writefln("%s price per pound is %f", fruit, price[fruit]);
 }
 ---
 The second version of the program obviously looks better than first version,
 mainly because we recognized that the task is about finding value by key and
 expressed it with right structure. In some way we moved "decision logic" made with
-$(B switch) statement from run time phase to code design phase.
+$(CN switch) statement from run time phase to code design phase.
 )
 
 $(P
-The tennuque we just used is simple but has tremendouse power
+The technique we just used is simple but has tremendous power
 as it allows to express our intention neatly and concise.
-Imagine we replace $(B value) by a function (pointer to a function
+For example, imagine we replace $(CN value) by a function (pointer to a function
 to be precise), then we can easily map a key to an action
-with such $(B key-function) map.
+with such $(CN key-function) map.
 )
 
 $(P
 There is yet another interesting case.
 Say we need to get from city A to city B. We can do it
-by car, bus, boat or airplane. On a high abstact level
+by car, bus, boat or airplane. On a high abstract level
 we can express the task as following pseudo code:
 ---
 transport.go(A, B);
 ---
-where transport is type Car, Bus, Boat or Airplane.
+where transport is of type Car, Bus, Boat or Airplane.
 All concrete details of how trip actually go are going
-to be encapsulated inside a particular type. It is much
-better than write code like this:
+to be encapsulated inside a particular type.
+The alternative "naive" approach would look something like this:
 ---
 switch (transportationName)
 {
