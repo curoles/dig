@@ -13,16 +13,16 @@ that adds two numbers and returns the result:
 $(UL
 $(LI
 First goes function return value type, it can be any type or
-special type `void` if a function returns nothing.
+special type $(CN void) if a function returns nothing.
 )
 $(LI
 Then comes name of the function.
 )
 $(LI
-Then in parenthesis go function arguments.
+Then in parenthesis function arguments follow.
 )
 $(LI
-Then inside the curly brackets body of the function.
+Then inside the curly brackets body of the function goes.
 The body of the function is a list of instructions
 that actually implement required functionality.
 )
@@ -41,12 +41,15 @@ variable comes from the caller.
 $(P
 A function normally takes input data in form of arguments
 and return some result. To exit from a function and return
-result use keyword `return`.
-Keyword `return` can be in any place inside a function,
-once execution flow reaches it the execution goes back to
+a result use keyword $(CN return).
+Keyword $(CN return) can be in any place inside a function
+and can be use more than once in case there are multiple exits
+from the function.
+Once execution flow reaches $(CN return) the execution goes back to
 the point where this function was called.
-If function returns nothing and its return type is `void`,
-then you just write `return;` or do not use `return` at all
+If function returns nothing and its return type is $(CN void),
+then you just write `return;` without any parameters,
+alternativly do not use $(CN return) at all
 because compiler will automatically exit at the end of the function.
 If a function actually returns something, then the syntax is
 `return Expression;` where Expression is a variable or some
@@ -62,15 +65,15 @@ Here is an example how our example function $(B sum) could be called:
 ---
 int a = 7;
 int b = 3;
-int c = sumOfab(a, b);
+int c = sum(a, b);
 ---
 )
 
 $(P
 In addition to fixed arguments D allows to define a function with
-variable number of arguments. We are not going to use
-so called $(I variadic) functions with an
-exception of function $(B writefln) that has one fixed argument
+variable number of arguments. We are not going to use these
+so called $(I variadic) functions in this book with an
+exception of library function $(B writefln) that has one fixed argument
 with the format string and rest are parameters that will be
 substituted into the places with '%' inside the format string.
 )

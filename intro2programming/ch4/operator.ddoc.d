@@ -33,8 +33,8 @@ $(P
 Another group of operators we are going to use a lot is $(I logical) operators:
 $(UL
 $(LI
-Binary operator '$(CN &&)' performs logical AND between two boolean operands.
-The result is true if both operands value is true.
+Binary operator '$(CN &&)' performs logical $(B AND) between two boolean operands.
+The result is true if both operands have value that is true.
 ---
 assert ( (true  && true ) == true);
 assert ( (true  && false) == false);
@@ -42,14 +42,31 @@ assert ( (false && false) == false);
 ---
 )
 $(LI
-Operator '$(CN ||)' is logical OR.
+Binary operator '$(CN ||)' performs logical $(B OR) between two boolean operands.
+The result is true if any operand is true.
+---
+assert ( (false  || true ) == true);
+assert ( (true   || false) == true);
+assert ( (false  || false) == false);
+---
 )
 $(LI
-Operator '$(CN !)' is negation.
+Unary operator '$(CN !)' negates value that follows.
+$(CN True) becomes $(CN false) and $(CN false) becomes $(true).
+---
+assert ( !false == true);
+assert ( !true  == false);
+---
 )
 )
 )
 
 $(P
-operator precedence
+There is one interesting feature of operators that worth noting.
+D compiler honors common agreements about operators precedence,
+similarly to mathematics,
+in order to let coder to avoid parenthesis in code when it is possible.
+For example, in expression `a*b + c`, operator $(CN *) will be called
+fist and operator $(CN +) second. In not fot this feature, programmers
+would be forced to explicitly group operands like `(a*b) + c`.
 )

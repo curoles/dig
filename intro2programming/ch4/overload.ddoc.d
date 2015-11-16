@@ -9,7 +9,7 @@ int sum(int a, int b)
 }
 ---
 It operates with integer types and naturally returns integer type.
-But a function that sums two real numbers of type `float` could be usefull too.
+But a function that sums two real numbers of type $(CN float) could be usefull too.
 We can use the same function name with different types of arguments
 or different function $(I signature). It is called function $(I overloading).
 Compiler will know what version of an overloaded function to use
@@ -20,7 +20,7 @@ depending on the actual argument types.
 $(P
 Let us define two functions with the same name but different signatures.
 Inside each function we will print what type of numbers it operates with,
-integet or real.
+integer or real.
 ---
 import std.stdio;
 
@@ -55,12 +55,12 @@ and `sum(float a, float b)` for `sum(7.1 + 3.2)` call.
 
 $(P
 Function $(B main) is an another example of an $(I overloaded) function.
-It can have no arguments at all or an argument of type `string[]`.
-Also its return type can be `void` or `int`.
-This makes it easy to use function $(B main).
+It can have no arguments at all or an argument of type $(CN string[]).
+Also its return type can be either $(CN void) or $(CN int).
+This makes it easy to use function $(B main) depending on a situation.
 If your program does not
 expect any arguments from the command line then you can use `main()`.
-If your program can process parameters from the command line,
+If your program expects parameters from the command line,
 then use `main(string[] args)`.
 )
 
