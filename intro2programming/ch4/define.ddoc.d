@@ -78,3 +78,54 @@ with the format string and rest are parameters that will be
 substituted into the places with '%' inside the format string.
 )
 
+$(P
+Let us improve our Fahrenheit to Celsius converter by placing
+convertion code into a separate function called $(CN F2C).
+Note that in the last
+version of the program we did the convertion two times in the code
+repeating the same code twice, so it makes sense to define convertion
+function once and forever and call it when we need it.
+---
+// Fahrenheit to Celsius converter.
+// Formula: T(°C) = (T(°F) - 32) × 5/9
+
+import std.stdio;
+
+float temperatureF = 71; // Storage for temperature in F.
+float temperatureC;      // Storage for temperature in C.
+
+immutable int scaleOffset = 32; // F and C scales offset.
+
+// °F to °C convertion function.
+//
+float F2C(float temperatureF)
+{
+    return ((temperatureF - scaleOffset) * 5 ) / 9;
+}
+
+// 'main' is first function to be executed by computer, by agreement.
+void main()
+{
+    // Ask user to provide temperature in F.
+    writeln("Input temperature in F:");
+    readf("%f", &temperatureF);
+    
+    temperatureC = F2C(temperatureF); // Convertion from F to C.
+    
+    // water freezes at 0 degrees Celsius.
+    auto freezingCold = temperatureC < 0;
+	
+    // Tell user result of the convertion.
+    writefln("Temperature %.2f °F = %.2f °C, freezing? %s",
+        temperatureF, temperatureC, freezingCold);
+	
+    // Print small convertion table around given temperature.
+    foreach (offset; -3..4) {
+        temperatureC = F2C(temperatureF + offset);
+        writefln("%.2f °F : %.2f °C", temperatureF + offset, temperatureC);
+    }
+}
+---
+)
+
+

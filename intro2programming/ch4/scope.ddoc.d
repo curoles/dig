@@ -72,9 +72,64 @@ and visibility: modules inside other modules, functions, custom types and so on.
 )
 
 $(P
-f2c version when vars inside main
+Now that we know more about different scopes or visibility domains
+let us have a critical look at the last version of the
+Fahrenheit to Celsius convertion program.
+As a general rule of thumb, it is recommended to define variables
+when they actually used and not sooner. Variable (or rather constant)
+$(CN scaleOffset) is used only inside function $(CN F2C), so it
+makes sense to move it inside the function.
+In addition we will turn 5/9 to named constant $(CN scaleFactor).
+Variables $(CN temperatureF) and $(CN temperatureC) are used inside
+function $(CN main), let us move them too.
+---
+// Fahrenheit to Celsius converter.
+// Formula: T(°C) = (T(°F) - 32) × 5/9
+import std.stdio;
+
+
+// °F to °C convertion function.
+//
+float F2C(float temperatureF)
+{
+    enum float scaleOffset = 32; // F and C scales offset.
+    enum float scaleFactor = 5.0/9.0;
+
+    return (temperatureF - scaleOffset) * scaleFactor;
+}
+
+// 'main' is first function to be executed by computer, by agreement.
+void main()
+{
+    float temperatureF = 71; // Storage for temperature in F.
+
+    // Ask user to provide temperature in F.
+    writeln("Input temperature in F:");
+    readf("%f", &temperatureF);
+    
+    float temperatureC = F2C(temperatureF); // Convertion from F to C.
+    
+    // water freezes at 0 degrees Celsius.
+    auto freezingCold = temperatureC < 0;
+	
+    // Tell user result of the convertion.
+    writefln("Temperature %.2f °F = %.2f °C, freezing? %s",
+        temperatureF, temperatureC, freezingCold);
+	
+    // Print small convertion table around given temperature.
+    foreach (offset; -3..4) {
+        temperatureC = F2C(temperatureF + offset);
+        writefln("%.2f °F : %.2f °C", temperatureF + offset, temperatureC);
+    }
+}
+---
 )
 
 $(P
 Person with with(john) 
 )
+
+$(P
+scope exit,success,failure
+)
+

@@ -55,7 +55,4 @@ use pure
 )
 
 
-$(P
-rewrite f2c making convertion function
-)
 
